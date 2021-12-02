@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -64,6 +66,13 @@
                                 @endif
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <a href="{{ route('login.twitter') }}"><i class="fab fa-twitter">Twitterでログイン</i></a>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
             </div>
