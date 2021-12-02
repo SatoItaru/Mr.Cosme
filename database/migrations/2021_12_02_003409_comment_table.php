@@ -13,7 +13,14 @@ class CommentTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('comment', function (Blueprint $table){
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('post_id');
+            $table->string('body');
+
+            // $table->foreign('user_id')->reference('id')->on('users');
+            // $table->foreign('post_id')->reference('id')->on('posts');
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class CommentTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('comment');
     }
 }

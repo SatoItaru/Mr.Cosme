@@ -13,7 +13,10 @@ class ImagesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('images', function(Blueprint $table){
+                $table->text('image_path')->nullable();
+                $table->text('public_id')->nullable();
+        });
     }
 
     /**
@@ -23,6 +26,6 @@ class ImagesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('images');
     }
 }
