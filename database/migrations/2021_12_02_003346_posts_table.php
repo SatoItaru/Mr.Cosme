@@ -13,7 +13,16 @@ class PostsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('posts', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            // $table->unsignedBinInteger('user_id');
+            $table->string('title');
+            $table->string('body');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+
+            // $table->foreign('user_id')->reference('id')->on('users');
+        });
     }
 
     /**
@@ -23,6 +32,6 @@ class PostsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('posts');
     }
 }
