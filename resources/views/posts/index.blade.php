@@ -4,19 +4,24 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-	         <div class="card text-center">
-			<div class="card-header">
-				投稿一覧
-			</div>
-			<div class="card-body">
-				<h5 class="card-title">初めての投稿</h5>
-				<p class="card-text">Mr.Cosme</p>
-				<a href="#" class="btn btn-primary">投稿を読む</a>
-			</div>
-			<div class="card-footer text-muted">
-				2日前
-			</div>
-		</div>
+            <div class="card text-center">
+                <div class="card-header">
+                    投稿一覧
+                </div>
+                @foreach ($posts as $post)
+                <div class="card-body">
+                    <h5 class="card-title">タイトル：{{ $post->title }}</h5>
+                    <p class="card-text">内容：{{ $post->body }}</p>
+                    <a href="#" class="btn btn-primary">詳細へ</a>
+                </div>
+                <div class="card-footer text-muted">
+                    投稿日時：{{ $post->created_at }}
+                </div>
+                @endforeach
+            </div>
+        </div>
+        <div class="col-md-2">
+            <a href="{{ route('posts.create') }}" class="btn btn-primary">投稿する</a>
         </div>
     </div>
 </div>

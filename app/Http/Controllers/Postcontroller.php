@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
+use App\Http\Requests\PostRequest;
 
 class Postcontroller extends Controller
 {
@@ -12,8 +14,10 @@ class Postcontroller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('posts.index');
+    {  
+        $posts = Post::all();
+        return view('posts.index', compact('posts'));
+        // return view('posts.index');
     }
 
     /**
@@ -23,7 +27,7 @@ class Postcontroller extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -32,24 +36,18 @@ class Postcontroller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
-        //
+        $input = $request->all();//ユーザーが入力した$requestの配列を$inputに代入している。
+
+        $input['user_id'] = Auth::id();//user_idはAuth::idで取得して$inputの配列に追加。
+
+        Post::create($input);//create()使用して新規投稿を保存。
+
+        return redirect()->route('posts_index');
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
