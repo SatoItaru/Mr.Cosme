@@ -14,9 +14,9 @@ class AddColumnsToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('age');
-            $table->string('occupation');
-            $table->string('profile_image')->default('default.png');
+            // $table->string('age')->nullable()->change();
+            // $table->string('occupation')->nullable()->change();
+            // $table->string('profile_image')->default('default.png');
         });
     }
 
@@ -28,7 +28,10 @@ class AddColumnsToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            Schema::dropIfExists('users');
+            // $table->string('age')->nullable(false)->change();
+            // $table->string('occupation')->nullable(false)->change();
+            // $table->dropColumn('profile_image');
+            // Schema::dropIfExists('users');
         });
     }
 }
