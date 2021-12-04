@@ -21,6 +21,7 @@ class Postcontroller extends Controller
     public function index()
     {  
         $posts = Post::all();
+        $posts->load('user');
         return view('posts.index', compact('posts'));
         // return view('posts.index');
     }
@@ -59,7 +60,9 @@ class Postcontroller extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -69,9 +72,16 @@ class Postcontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PostRequest $request, $id)
     {
-        //
+        $post = Post::find($id);
+
+        if(Auth::id() !== $post->user_id){
+            return abort(404);
+        }
+        $post->update($request->all());
+
+        return view('posts.show', compact('post'));
     }
 
     /**
@@ -82,6 +92,20 @@ class Postcontroller extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+
+        if(Auth::id() !== $post->user_id){
+            return abort(404);
+        }
+        $post -> delete();
+
+        return redirect()->route('posts.index');
+    }
+
+    public function show($id)
+    {
+        $post = Post::find($id);
+
+        return view('posts.show', compact('post'));
     }
 }
