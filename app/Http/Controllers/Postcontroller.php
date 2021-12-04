@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Post;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
 
 class Postcontroller extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -44,7 +49,7 @@ class Postcontroller extends Controller
 
         Post::create($input);//create()使用して新規投稿を保存。
 
-        return redirect()->route('posts_index');
+        return redirect()->route('posts.index');
     }
 
     /**
