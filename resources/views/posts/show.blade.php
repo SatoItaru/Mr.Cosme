@@ -9,6 +9,7 @@
             </div>
             <div class="card-body">
                 <p class="card-text">＜使い方＞<br>{{ $post->body }}</p>
+                <img src="{{ $post->image_path }}" alt="画像">
                 <p>投稿日時：{{ $post->created_at }}</p>
                 <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-primary">編集する</a>
                 <form action='{{ route('posts.destroy', $post->id) }}' method='post'>
@@ -23,7 +24,7 @@
         <div class="col-md-8">
             <form action="{{ route('comments.store') }}" method="POST">
             {{csrf_field()}}
-      <input type="hidden" name="post_id" value="{{ $post->id }}">
+                <input type="hidden" name="post_id" value="{{ $post->id }}">
                 <div class="form-group">
                     <label>コメント</label>
                     <textarea class="form-control" placeholder="内容" rows="5" name="body"></textarea>

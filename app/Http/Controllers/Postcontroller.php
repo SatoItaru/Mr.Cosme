@@ -6,6 +6,7 @@ use Auth;
 use App\Post;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
+use JD\Cloudder\Facades\Cloudder;
 
 class Postcontroller extends Controller
 {
@@ -44,11 +45,24 @@ class Postcontroller extends Controller
      */
     public function store(PostRequest $request)
     {
-        $input = $request->all();//ユーザーが入力した$requestの配列を$inputに代入している。
+        $post = new Post();
 
-        $input['user_id'] = Auth::id();//user_idはAuth::idで取得して$inputの配列に追加。
+        $post->title = $request->title;
+        $post->body  = $request->body;
+        $post->user_id = Auth::id();
 
-        Post::create($input);//create()使用して新規投稿を保存。
+        if ($image = $request->file('image')) {
+            $image_path = $image->getRealPath();
+            Cloudder::upload($image_path,null);//直前にアップロードされた画像のpublicIdを取得する。
+            $publicId = Cloudder::getPublicId();
+            $logoUrl = Cloudder::secureShow($publicId, [
+                'width' => 500,
+                'height' => 400,
+            ]);
+            $post->image_path = $logoUrl;
+            $post->public_id = $publicId;
+        }
+        $post->save();
 
         return redirect()->route('posts.index');
     }
@@ -96,6 +110,9 @@ class Postcontroller extends Controller
 
         if(Auth::id() !== $post->user_id){
             return abort(404);
+        }
+        if(isset($post->public_id)){
+            Cloudder::destroyImage($post->public_id);
         }
         $post -> delete();
 
