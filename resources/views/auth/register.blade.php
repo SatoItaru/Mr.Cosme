@@ -15,7 +15,7 @@
 
                         <div class="form-group row justify-content-center">
                             <div class="col-md-8">
-                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                            <input id="name" type="text" placeholder="アカウントネーム" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -27,6 +27,7 @@
                             <div class="form-group row justify-content-center">
                                 <div class="col-md-8">
                                     <select type="text" class="form-control" name="age">
+                                        <option value="">年代</option>
                                         <option value="20代">20代</option>
                                         <option value="30代">30代</option>
                                         <option value="40代">40代</option>
@@ -38,6 +39,7 @@
                             <div class="form-group row justify-content-center">
                                 <div class="col-md-8">
                                     <select type="text" class="form-control" name="occupation">
+                                        <option value="">職業</option>
                                         @foreach (Config::get('occupation.job_name') as $key => $val)
                                             <option value="{{ $key }}">{{ $val }}</option>
                                         @endforeach
@@ -47,7 +49,7 @@
 
                         <div class="form-group row justify-content-center">
                             <div class="col-md-8">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" placeholder="お使いのメールアドレスを登録" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -58,7 +60,7 @@
 
                         <div class="form-group row justify-content-center">
                             <div class="col-md-8">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" placeholder="パスワード設定" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -70,7 +72,7 @@
 
                         <div class="form-group row justify-content-center">
                             <div class="col-md-8">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" placeholder="パスワードの確認"class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
 
