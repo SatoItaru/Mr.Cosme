@@ -18,7 +18,7 @@
             {{method_field('PATCH')}}
                 <div class="form-group row justify-content-center">
                     <div class="col-md-8">
-                        <input type="text" class="form-control" value="{{ $user->name }}" name='name'>
+                        <input type="text" class="form-control" placeholder='新しいアカウントネーム' value="{{ $user->name }}" name='name'>
                         <select type="text" class="form-control" value="{{ $user->age }}" name="age">
                             <option value="">年代</option>
                             <option value="20代">20代</option>
@@ -32,7 +32,7 @@
                                     <option value="{{ $key }}">{{ $val }}</option>
                                 @endforeach
                         </select>
-                        <input type="text" class="form-control" value="{{ $user->email}}" name='email'>
+                        <input type="text" placeholder='新しいメールアドレス' class="form-control" value="{{ $user->email}}" name='email'>
                         <button type="submit" class="btn btn-primary">更新する</button>
                     </div>
                 </div>
