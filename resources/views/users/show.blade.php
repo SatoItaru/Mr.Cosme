@@ -9,7 +9,7 @@
                 <h5>{{ $user->age }}</h5>
                 <h5>{{ $user->occupation }}</h5>
                 <h5>{{ $user->email}}</h5>
-                <a href="{{ route('posts.edit', $user->id) }}" class="btn btn-primary">編集する</a>
+                <a href="{{ route('users.edit', Auth::id()) }}" class="btn btn-primary">編集する</a>
             </div>
         </div>
     </div>
