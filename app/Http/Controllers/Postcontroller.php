@@ -20,7 +20,7 @@ class Postcontroller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {  
+    {
         $posts = Post::all();
         $posts->load('user');
         return view('posts.index', compact('posts'));

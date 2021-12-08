@@ -2,11 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
+use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\UserRequest;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -35,7 +41,7 @@ class UserController extends Controller
      */
     public function store(UserRequest $request)
     {
-        $user = Auth::user();
+        //
     }
 
     /**
@@ -59,7 +65,13 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+
+        if(Auth::id() !== $user->id){
+            return abort(404);
+        }
+
+        return view('users.edit', compact('user'));
     }
 
     /**
@@ -69,9 +81,16 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserRequest $request, $id)
     {
-        //
+        $user = User::find($id);
+
+        if(Auth::id() !== $user->id){
+            return abort(404);
+        }
+        $user->update($request->all());
+
+        return view('users.show', compact('user'));
     }
 
     /**
