@@ -13,11 +13,13 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{ route('users.update', $user->id) }}" method="POST">
+            <form action="{{ route('users.update', $user->id) }}" method="POST" enctype="multipart/form-data">
             {{csrf_field()}}
             {{method_field('PATCH')}}
                 <div class="form-group row justify-content-center">
                     <div class="col-md-8">
+                        <label for="image">アカウント画像</label>
+                        <input type="file" class="form-control-file" id="image" name="image">
                         <input type="text" class="form-control" placeholder='新しいアカウントネーム' value="{{ $user->name }}" name='name'>
                         <select type="text" class="form-control" value="{{ $user->age }}" name="age">
                             <option value="">年代</option>

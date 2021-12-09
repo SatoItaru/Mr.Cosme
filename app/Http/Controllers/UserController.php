@@ -6,6 +6,7 @@ use Auth;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
+use JD\Cloudder\Facades\Cloudder;
 
 class UserController extends Controller
 {
@@ -83,11 +84,29 @@ class UserController extends Controller
      */
     public function update(UserRequest $request, $id)
     {
+        $user = new User;
+
+        $user->image = $request->image;
+
         $user = User::find($id);
 
         if(Auth::id() !== $user->id){
             return abort(404);
         }
+        if ($image = $request->file('image')) {
+            $image_path = $image->getRealPath();
+            Cloudder::upload($image_path, null);
+            //直前にアップロードされた画像のpublicIdを取得する。
+            $publicId = Cloudder::getPublicId();
+            $logoUrl = Cloudder::secureShow($publicId, [
+                'width'     => 200,
+                'height'    => 200
+            ]);
+            $user->image_path = $logoUrl;
+            $user->public_id  = $publicId;
+        }
+
+        $user->save();
         $user->update($request->all());
 
         return view('users.show', compact('user'));
@@ -101,6 +120,18 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+
+        if(Auth::id() !== $user->id){
+            return abort(404);
+        }
+
+        if(isset($user->public_id)){
+            Cloudder::destroyImage($user->public_id);
+        }
+
+        $user -> delete();
+
+        return redirect()->route('users.show');
     }
 }
