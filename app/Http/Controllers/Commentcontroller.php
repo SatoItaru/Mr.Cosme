@@ -42,6 +42,7 @@ class Commentcontroller extends Controller
      */
     public function store(CommentRequest $request)
     {
+
         $post = Post::find($request->post_id); //該当の投稿を探す
 
         $comment = new Comment();//コメントのインスタンスを作成
