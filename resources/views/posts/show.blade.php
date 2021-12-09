@@ -32,6 +32,7 @@
                 <button type="submit" class="btn btn-light text-secondary" width="40" height="40">
                 <img src="https://res.cloudinary.com/dqxuxpwv9/image/upload/v1639018170/comment_dei2ik.png" width="40" height="40" alt="">コメント
                 </button>
+                <p>：{{$post->comments->count() }}</p>
             </form>
         </div>
     </div>
