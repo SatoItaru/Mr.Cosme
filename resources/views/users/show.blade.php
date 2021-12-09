@@ -5,8 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card-header">
+                @if ($user->image_path == null)
                 <img src="{{ asset('assets/images/default.png') }}"class="rounded-circle img-thumbnail mb-3" width="200" height="200" alt="">
+                @else
                 <img src="{{ $user->image_path }}" class="rounded-circle img-thumbnail mb-3" width="200" height="200" alt="画像">
+                @endif
                     <h5>{{ $user->name }}</h5>
                     <h5>{{ $user->age }}</h5>
                     <h5>{{ $user->occupation }}</h5>
