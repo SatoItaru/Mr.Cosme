@@ -25,6 +25,7 @@ class PostRequest extends FormRequest
     {
         return [
             'title' => 'required|max:30',
+            'item' => 'required',
             'body' => 'required',
             'image' => 'mimes:jpeg,jpg,png,gif|max:10240',
         ];
@@ -36,6 +37,7 @@ class PostRequest extends FormRequest
             'title.required' => 'タイトルを入れてください',
             'title.unique'   => 'タイトルが被っています',
             'title.max' => 'タイトルは30文字以内で入力してください',
+            'item.required' => 'アイテム名を入れてください',
             'body.required' => '使った感想を入れてください',
             'image.mimes'    => 'ファイルタイプをjpeg,jpg,png,gifに設定してください。',
             'image.max'      => 'ファイルサイズを10MB以下に設定してください。',
