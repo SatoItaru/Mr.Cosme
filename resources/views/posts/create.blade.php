@@ -14,11 +14,20 @@
                 </div>
             @endif
             <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
-                {{csrf_field()}} 
+                {{csrf_field()}}
                     <div class="form-group">
                         <label>タイトル</label>
                         <input type="text" class="form-control" placeholder="タイトルを入力して下さい" name="title">
                     </div>
+                    <div class="form-group ">
+                        <select type="text" class="form-control" name="item">
+                            <option value="">アイテム</option>
+                            @foreach (Config::get('items.item_name') as $key => $val)
+                                <option value="{{ $key }}">{{ $val }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
                     <div class="form-group">
                         <label>内容</label>
                         <textarea class="form-control" placeholder="内容" rows="5" name="body"></textarea>

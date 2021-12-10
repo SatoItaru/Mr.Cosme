@@ -17,6 +17,7 @@ class PostsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->string('title');
+            $table->string('item');
             $table->string('body');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
