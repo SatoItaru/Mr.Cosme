@@ -14,8 +14,14 @@ class ImagesTable extends Migration
     public function up()
     {
         Schema::create('images', function(Blueprint $table){
-                $table->text('image_path')->nullable();
-                $table->text('public_id')->nullable();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('post_id');
+            $table->text('image_path')->nullable();
+            $table->text('public_id')->nullable();
+            $table->timestamps();
+
+            // $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
+            $table->foreign('post_id')->references('id')->on('posts');
         });
     }
 

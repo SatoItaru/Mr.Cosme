@@ -33,12 +33,15 @@
                         <textarea class="form-control" placeholder="内容" rows="5" name="body"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="image">画像</label>
-                        <input type="file" class="form-control-file" id="image" name="image">
+                            <label for="image">画像</label>
+                            <input type="file" class="form-control-file" id="image" name="image1">
+                            <input type="file" class="form-control-file" id="image" name="image2">
+                            <input type="file" class="form-control-file" id="image" name="image3">
+                            <input type="file" class="form-control-file" id="image" name="image4">
                     </div>
-                    <button type="submit" class="btn btn-primary">作成する</button>
+                        <button type="submit" class="btn btn-primary">作成する</button>
                 </form>
+            </div>
         </div>
     </div>
-</div>
 @endsection
