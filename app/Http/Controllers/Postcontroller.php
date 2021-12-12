@@ -58,10 +58,16 @@ class Postcontroller extends Controller
 
         $post->user_id = Auth::id();
 
+        $image1 = null;
+        $image2 = null;
+        $image3 = null;
+        $image4 = null;
+
         $post->save();
 
-        if ($uploadedImage = $request->file('image1')) {
-            $image1 = new Image();
+        if ($uploadedImage = $request->file('image1'))
+            {
+                $image1 = new Image();
                 $image_path = $uploadedImage->getRealPath();
                 Cloudder::upload($image_path,null);//直前にアップロードされた画像のpublicIdを取得する。
                 $publicId = Cloudder::getPublicId();
@@ -76,8 +82,9 @@ class Postcontroller extends Controller
 
                 $post->images()->save($image1);
             }
-        if ($uploadedImage = $request->file('image2')) {
-            $image2 = new Image();
+        if ($uploadedImage = $request->file('image2'))
+            {
+                $image2 = new Image();
                 $image_path = $uploadedImage->getRealPath();
                 Cloudder::upload($image_path,null);//直前にアップロードされた画像のpublicIdを取得する。
                 $publicId = Cloudder::getPublicId();
@@ -88,12 +95,11 @@ class Postcontroller extends Controller
                 $image2->image_path = $logoUrl;
                 $image2->public_id = $publicId;
 
-                // $post->save();
-
                 $post->images()->save($image2);
             }
-        if ($uploadedImage = $request->file('image3')) {
-            $image3 = new Image();
+        if ($uploadedImage = $request->file('image3'))
+            {
+                $image3 = new Image();
                 $image_path = $uploadedImage->getRealPath();
                 Cloudder::upload($image_path,null);//直前にアップロードされた画像のpublicIdを取得する。
                 $publicId = Cloudder::getPublicId();
@@ -104,12 +110,11 @@ class Postcontroller extends Controller
                 $image3->image_path = $logoUrl;
                 $image3->public_id = $publicId;
 
-                // $post->save();
-
                 $post->images()->save($image3);
             }
-        if ($uploadedImage = $request->file('image4')) {
-            $image4 = new Image();
+        if ($uploadedImage = $request->file('image4'))
+            {
+                $image4 = new Image();
                 $image_path = $uploadedImage->getRealPath();
                 Cloudder::upload($image_path,null);//直前にアップロードされた画像のpublicIdを取得する。
                 $publicId = Cloudder::getPublicId();
@@ -120,11 +125,8 @@ class Postcontroller extends Controller
                 $image4->image_path = $logoUrl;
                 $image4->public_id = $publicId;
 
-                // $post->save();
-
                 $post->images()->save($image4);
             }
-        // $post->save();
 
         $post->images()->save($image1,$image2,$image3,$image4);
 
