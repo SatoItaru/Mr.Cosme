@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $fillable = ['title', 'body', 'user_id'];
+    protected $fillable = ['title', 'body', 'item', 'user_id'];
 
     public function comments()
     {
@@ -21,5 +21,10 @@ class Post extends Model
     public function users()
     {
         return $this->belongsToMany('App\User')->withTimestamps();
+    }
+
+    public function images()
+    {
+        return $this->hasMany('App\Image');
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\Post;
+use App\Image;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
 use JD\Cloudder\Facades\Cloudder;
@@ -45,25 +46,87 @@ class Postcontroller extends Controller
      */
     public function store(PostRequest $request)
     {
+        // $post = new Post();
+
+        $post = Post::find(1);
+
         $post = new Post();
 
         $post->title = $request->title;
         $post->item  = $request->item;
         $post->body  = $request->body;
+
         $post->user_id = Auth::id();
 
-        if ($image = $request->file('image')) {
-            $image_path = $image->getRealPath();
-            Cloudder::upload($image_path,null);//直前にアップロードされた画像のpublicIdを取得する。
-            $publicId = Cloudder::getPublicId();
-            $logoUrl = Cloudder::secureShow($publicId, [
-                'width' => 500,
-                'height' => 400,
-            ]);
-            $post->image_path = $logoUrl;
-            $post->public_id = $publicId;
-        }
         $post->save();
+
+        if ($uploadedImage = $request->file('image1')) {
+            $image1 = new Image();
+                $image_path = $uploadedImage->getRealPath();
+                Cloudder::upload($image_path,null);//直前にアップロードされた画像のpublicIdを取得する。
+                $publicId = Cloudder::getPublicId();
+                $logoUrl = Cloudder::secureShow($publicId, [
+                    'width' => 500,
+                    'height' => 400,
+                ]);
+                $image1->image_path = $logoUrl;
+                $image1->public_id = $publicId;
+
+                $post->save();
+
+                $post->images()->save($image1);
+            }
+        if ($uploadedImage = $request->file('image2')) {
+            $image2 = new Image();
+                $image_path = $uploadedImage->getRealPath();
+                Cloudder::upload($image_path,null);//直前にアップロードされた画像のpublicIdを取得する。
+                $publicId = Cloudder::getPublicId();
+                $logoUrl = Cloudder::secureShow($publicId, [
+                    'width' => 500,
+                    'height' => 400,
+                ]);
+                $image2->image_path = $logoUrl;
+                $image2->public_id = $publicId;
+
+                // $post->save();
+
+                $post->images()->save($image2);
+            }
+        if ($uploadedImage = $request->file('image3')) {
+            $image3 = new Image();
+                $image_path = $uploadedImage->getRealPath();
+                Cloudder::upload($image_path,null);//直前にアップロードされた画像のpublicIdを取得する。
+                $publicId = Cloudder::getPublicId();
+                $logoUrl = Cloudder::secureShow($publicId, [
+                    'width' => 500,
+                    'height' => 400,
+                ]);
+                $image3->image_path = $logoUrl;
+                $image3->public_id = $publicId;
+
+                // $post->save();
+
+                $post->images()->save($image3);
+            }
+        if ($uploadedImage = $request->file('image4')) {
+            $image4 = new Image();
+                $image_path = $uploadedImage->getRealPath();
+                Cloudder::upload($image_path,null);//直前にアップロードされた画像のpublicIdを取得する。
+                $publicId = Cloudder::getPublicId();
+                $logoUrl = Cloudder::secureShow($publicId, [
+                    'width' => 500,
+                    'height' => 400,
+                ]);
+                $image4->image_path = $logoUrl;
+                $image4->public_id = $publicId;
+
+                // $post->save();
+
+                $post->images()->save($image4);
+            }
+        // $post->save();
+
+        $post->images()->save($image1,$image2,$image3,$image4);
 
         return redirect()->route('posts.index');
     }
@@ -123,7 +186,7 @@ class Postcontroller extends Controller
     public function show($id)
     {
         $post = Post::find($id);
-        $post->load('user', 'comments');
+        $post->load('user', 'comments','images');
         return view('posts.show', compact('post'));
     }
 }
