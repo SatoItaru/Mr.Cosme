@@ -17,12 +17,16 @@
             {{csrf_field()}}
             {{method_field('PATCH')}}
                 <div class="form-group">
-                    <label>タイトル</label>
-                    <input type="text" class="form-control" value="{{ $post->title }}" name="title">
+                    <label>ブランド</label>
+                    <input type="text" class="form-control" value="{{ $post->brand }}" name="brand">
                 </div>
                 <div class="form-group">
-                    <label>内容</label>
-                    <textarea class="form-control" rows="5" name="body">{{ $post->body }}</textarea>
+                    <label>＜使い方＞</label>
+                    <textarea class="form-control" rows="3" name="body">{{ $post->body }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label>＜使った感想＞</label>
+                    <textarea class="form-control" rows="5" name="body">{{ $post->detail }}</textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">更新する</button>
             </form>

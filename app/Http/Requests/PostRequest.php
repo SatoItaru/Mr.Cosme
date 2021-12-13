@@ -24,9 +24,11 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|max:30',
-            'item' => 'required',
+            'brand' => 'required',
+            'cosme' => 'required',
+            'price' => 'required',
             'body' => 'required',
+            'detail' => 'required',
             'image' => 'mimes:jpeg,jpg,png,gif|max:10240',
         ];
     }
@@ -34,11 +36,12 @@ class PostRequest extends FormRequest
     public function massages()
     {
         return [
-            'title.required' => 'タイトルを入れてください',
-            'title.unique'   => 'タイトルが被っています',
-            'title.max' => 'タイトルは30文字以内で入力してください',
-            'item.required' => 'アイテム名を入れてください',
-            'body.required' => '使った感想を入れてください',
+            'brand.required' => 'ブランド名を入れてください',
+            'brand.unique'   => 'ブランド名が被っています',
+            'cosme.required' => 'コスメを入れてください',
+            'price.required' => '価格を入れてください',
+            'body.required' => '使い方を入れてください',
+            'detail.required' => '使った感想を入れてください',
             'image.mimes'    => 'ファイルタイプをjpeg,jpg,png,gifに設定してください。',
             'image.max'      => 'ファイルサイズを10MB以下に設定してください。',
         ];

@@ -16,21 +16,30 @@
             <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
                 {{csrf_field()}}
                     <div class="form-group">
-                        <label>タイトル</label>
-                        <input type="text" class="form-control" placeholder="タイトルを入力して下さい" name="title">
+                        <label>ブランド</label>
+                        <input type="text" class="form-control" placeholder="ブランド名を入力して下さい" name="brand">
                     </div>
                     <div class="form-group ">
-                        <select type="text" class="form-control" name="item">
-                            <option value="">アイテム</option>
-                            @foreach (Config::get('items.item_name') as $key => $val)
+                        <select type="text" class="form-control" name="cosme">
+                            <option value="">コスメ</option>
+                            @foreach (Config::get('cosme.cosme_name') as $key => $val)
                                 <option value="{{ $key }}">{{ $val }}</option>
                             @endforeach
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label>内容</label>
-                        <textarea class="form-control" placeholder="内容" rows="5" name="body"></textarea>
+                        <label>価格</label>
+                        <input class="form-control" placeholder="価格を入れてください" name="price">
+                    </div>
+
+                    <div class="form-group">
+                        <label>使い方</label>
+                        <textarea class="form-control" placeholder="使い方を入れてください" rows="3" name="body"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>使った感想</label>
+                        <textarea class="form-control" placeholder="使った感想を入れてください" rows="5" name="detail"></textarea>
                     </div>
                     <div class="form-group">
                             <label for="image">画像</label>

@@ -46,15 +46,16 @@ class Postcontroller extends Controller
      */
     public function store(PostRequest $request)
     {
-        // $post = new Post();
 
         $post = Post::find(1);
 
         $post = new Post();
 
-        $post->title = $request->title;
-        $post->item  = $request->item;
+        $post->brand = $request->brand;
+        $post->cosme  = $request->cosme;
         $post->body  = $request->body;
+        $post->detail  = $request->detail;
+        $post->price  = $request->price;
 
         $post->user_id = Auth::id();
 
