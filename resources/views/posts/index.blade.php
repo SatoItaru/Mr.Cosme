@@ -6,7 +6,7 @@
             <div class="card text-center">
                 <div class="card-header">
                     投稿一覧
-                </div> 
+                </div>
                 @foreach ($posts as $post)
                 <div class="card-body">
                     <h5 class="card-title">{{ $post->brand }}</h5>
