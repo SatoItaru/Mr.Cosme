@@ -6,11 +6,11 @@
             <div class="card text-center">
                 <div class="card-header">
                     投稿一覧
-                </div>
+                </div> 
                 @foreach ($posts as $post)
                 <div class="card-body">
-                    <h5 class="card-title">タイトル：{{ $post->title }}</h5>
-                    <p class="card-text">内容：{{ $post->body }}</p>
+                    <h5 class="card-title">{{ $post->brand }}</h5>
+                    {{-- <p class="card-text">内容：{{ $post->body }}</p> --}}
                     <p class="card-text">投稿者：{{ $post->user->name }}</p>
                     <a href="{{ route('posts.show', $post->id) }}" class="btn btn-primary">詳細へ</a>
                     <div class="row justify-content-center">

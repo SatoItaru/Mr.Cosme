@@ -147,9 +147,8 @@ return [
     */
 
     'attributes' => [
-        'title'=>'タイトル',
+        'brand'=>'ブランド名',
         'body'=>'内容',
         'name'=>'アカウントネーム',
     ],
-
 ];
