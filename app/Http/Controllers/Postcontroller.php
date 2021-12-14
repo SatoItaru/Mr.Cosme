@@ -22,7 +22,7 @@ class Postcontroller extends Controller
      */
     public function index(Request $request)
     {
-        $posts = Post::paginate(20);
+        $order = $request->input('order');
 
         // 検索フォームで入力された値を取得する
         $search = $request->input('search');
@@ -49,21 +49,28 @@ class Postcontroller extends Controller
                         ->orWhere('price', 'like', '%'.$value.'%');
             }
 
-         // 上記で取得した$queryをページネートにし、変数$usersに代入
-            $posts = $query->paginate(20);
 
         }
+        if($order === 'latest'){
+            $query->orderBy('created_at', 'desc');
+        } elseif ($order === 'oldest'){
+            $query->orderBy('created_at', 'asc');
+        }
+        // 上記で取得した$queryをページネートにし、変数$usersに代入
+            $posts = $query->paginate(20);
+        // ビューにpostsとsearchを変数として渡す
+        // return view('posts.index')
+        //     ->with([
+        //         'posts' => $posts,
+        //         'search' => $search,
+        //         'order' => $order,
+        //     ]);
 
-        // ビューにusersとsearchを変数として渡す
-        return view('posts.index')
-            ->with([
-                'posts' => $posts,
-                'search' => $search,
-            ]);
-        $posts = Post::all();
-        $posts->load('user');
-        return view('posts.index', compact('posts'));
-        // return view('posts.index');
+        // $posts = Post::all();
+        // $posts->load('user');
+        return view('posts.index', compact('posts','search','order'));
+
+        // return view('post.index', ['posts' => Post::order($request->narabi)]);
     }
 
     /**
