@@ -31,3 +31,4 @@ Route::get('posts/{post}/unfavorites', 'FavoriteController@destroy')->name('unfa
 
 Route::get('posts/{post}/countfavorites', 'FavoriteController@count');
 Route::get('posts/{post}/hasfavorites', 'FavoriteController@hasfavorite');
+
