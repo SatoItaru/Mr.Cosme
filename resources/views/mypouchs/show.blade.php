@@ -3,22 +3,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <form class="mb-2 mt-4 text-center" method="GET" action="{{ route('posts.index') }}">
-                <input class="form-control my-2 mr-5" type="search" placeholder="キーワードで検索" name="search" value="@if (isset($search)) {{ $search }} @endif">
-                <div class="d-flex justify-content-center">
-                    <button class="btn btn-info my-2" type="submit">検索</button>
-                    <button class="btn btn-secondary my-2 ml-5">
-                        <a href="{{ route('posts.index') }}" class="text-white">
-                            クリア
-                        </a>
-                    </button>
-                </div>
-            </form>
             <div class="card text-center">
                 <div class="card-header">
                     投稿一覧
                 </div>
-                @foreach ($posts as $post)
+                @foreach ($mypouch as $post)
                 <div class="card-body">
                     <h5 class="card-title">{{ $post->brand }}</h5>
                     {{-- <p class="card-text">内容：{{ $post->body }}</p> --}}

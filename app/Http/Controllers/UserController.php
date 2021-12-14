@@ -134,4 +134,9 @@ class UserController extends Controller
 
         return redirect()->route('users.show');
     }
+
+    public function mypost()
+    {
+        //
+    }
 }
