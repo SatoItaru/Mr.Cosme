@@ -54,6 +54,8 @@ class UserController extends Controller
     public function show($id)
     {
         $user = Auth::user();
+        // $user = User::find($id); // ユーザを取得
+        // $posts = $user->posts()->get(); // ユーザが持つ投稿一覧を取得
 
         return view('users.show',compact('user'));
     }
@@ -90,6 +92,11 @@ class UserController extends Controller
 
         $user = User::find($id);
 
+        $user_id = Auth::id();
+
+        // $user = User::find($id); // ユーザを取得
+        // $posts = $user->posts()->get(); // ユーザが持つ投稿一覧を取得
+
         if(Auth::id() !== $user->id){
             return abort(404);
         }
@@ -100,7 +107,7 @@ class UserController extends Controller
             $publicId = Cloudder::getPublicId();
             $logoUrl = Cloudder::secureShow($publicId, [
                 'width'     => 200,
-                'height'    => 200
+                'height'    => 200,
             ]);
             $user->image_path = $logoUrl;
             $user->public_id  = $publicId;
@@ -135,8 +142,12 @@ class UserController extends Controller
         return redirect()->route('users.show');
     }
 
-    public function mypost()
+    public function like($id)
     {
-        //
+        $user = Auth::user();
+        // $user = User::find($id); // ユーザを取得
+        // $posts = $user->posts()->get(); // ユーザが持つ投稿一覧を取得
+
+        return view('likes.show',compact('user'));
     }
 }

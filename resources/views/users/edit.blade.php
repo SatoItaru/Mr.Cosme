@@ -21,15 +21,15 @@
                         <label for="image">アカウント画像</label>
                         <input type="file" class="form-control-file" id="image" name="image">
                         <input type="text" class="form-control" placeholder='新しいアカウントネーム' value="{{ $user->name }}" name='name'>
-                        <select type="text" class="form-control" value="{{ $user->age }}" name="age">
+                        <select type="text" class="form-control" name="age">
                             <option value="">年代</option>
-                            <option value="20代">20代</option>
+                            <option value="20代">20代</option>  
                             <option value="30代">30代</option>
                             <option value="40代">40代</option>
                             <option value="50代">50代</option>
                         </select>
                         <select type="text" class="form-control" name="occupation">
-                            <option value="">職業</option>
+                            <option value="{{ $user->occupation }}">職業</option>
                                 @foreach (Config::get('occupation.job_name') as $key => $val)
                                     <option value="{{ $key }}">{{ $val }}</option>
                                 @endforeach

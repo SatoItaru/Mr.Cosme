@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('新規登録') }}</div>
+                <div class="card-header text-center">{{ __('新規登録') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -27,7 +27,7 @@
                             <div class="form-group row justify-content-center">
                                 <div class="col-md-8">
                                     <select type="text" class="form-control" name="age">
-                                        <option value="">年代</option>
+                                        <option value="{{ old('age') }}">年代</option>
                                         <option value="20代">20代</option>
                                         <option value="30代">30代</option>
                                         <option value="40代">40代</option>
@@ -39,11 +39,12 @@
                             <div class="form-group row justify-content-center">
                                 <div class="col-md-8">
                                     <select type="text" class="form-control" name="occupation">
-                                        <option value="">職業</option>
+                                        <option value="{{ old('occupation') }}">職業</option>
                                         @foreach (Config::get('occupation.job_name') as $key => $val)
                                             <option value="{{ $key }}">{{ $val }}</option>
                                         @endforeach
                                     </select>
+                                    <div style="text-transform: none;">※あなたの職種に合ったものを選んで、コスメをオススメできたり探せたりします。</div>
                                 </div>
                             </div>
 
@@ -77,7 +78,7 @@
                         </div>
 
                         <div class="form-group row justify-content-center">
-                            <div class="col-md-6">
+                            <div class="col-md-6 text-center">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
