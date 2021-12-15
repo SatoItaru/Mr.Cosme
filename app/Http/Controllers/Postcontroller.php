@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\Post;
+use App\User;
 use App\Image;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
@@ -51,7 +52,9 @@ class Postcontroller extends Controller
 
 
         }
-        if($order === 'latest'){
+        if($order === 'popular'){
+            $query=Post::withCount('favorites')->orderBy('favorites_count', 'desc');
+        } elseif ($order === 'latest'){
             $query->orderBy('created_at', 'desc');
         } elseif ($order === 'oldest'){
             $query->orderBy('created_at', 'asc');
@@ -65,12 +68,7 @@ class Postcontroller extends Controller
         //         'search' => $search,
         //         'order' => $order,
         //     ]);
-
-        // $posts = Post::all();
-        // $posts->load('user');
         return view('posts.index', compact('posts','search','order'));
-
-        // return view('post.index', ['posts' => Post::order($request->narabi)]);
     }
 
     /**

@@ -7,6 +7,7 @@
                 <div class="btn-group">
                     <select class="form-control" name="order" id="">
                         <div class="dropdown-menu">
+                            <option value="popular">人気順</option>
                             <option value="latest">新しい順</option>
                             <option value="oldest">古い順</option>
                         </div>
@@ -29,7 +30,7 @@
                 @foreach ($posts as $post)
                 <div class="card-body">
                     <h5 class="card-title">{{ $post->brand }}</h5>
-                    <p class="card-text">内容：{{ $post->body }}</p>
+                    {{-- <p class="card-text">内容：{{ $post->body }}</p> --}}
                     <p class="card-text">投稿者：{{ $post->user->name }}</p>
                     <a href="{{ route('posts.show', $post->id) }}" class="btn btn-primary">詳細へ</a>
                     <div class="row justify-content-center">

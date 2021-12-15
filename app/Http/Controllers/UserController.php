@@ -56,6 +56,7 @@ class UserController extends Controller
         $user = Auth::user();
         // $user = User::find($id); // ユーザを取得
         // $posts = $user->posts()->get(); // ユーザが持つ投稿一覧を取得
+
         return view('users.show',compact('user'));
     }
 
@@ -141,8 +142,12 @@ class UserController extends Controller
         return redirect()->route('users.show');
     }
 
-    public function likes($id)
+    public function like($id)
     {
-        //
+        $user = Auth::user();
+        // $user = User::find($id); // ユーザを取得
+        // $posts = $user->posts()->get(); // ユーザが持つ投稿一覧を取得
+
+        return view('likes.show',compact('user'));
     }
 }

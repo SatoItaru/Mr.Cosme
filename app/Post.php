@@ -27,4 +27,9 @@ class Post extends Model
     {
         return $this->hasMany('App\Image');
     }
+
+    public function favorites()
+    {
+        return $this->belongsToMany('App\User')->withTimestamps();
+    }
 }
