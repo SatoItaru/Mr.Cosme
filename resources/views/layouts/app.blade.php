@@ -44,11 +44,11 @@
                         <a href="{{ route('users.edit', Auth::id()) }}" class="btn "><i class="far fa-question-circle"></i></a>
                         @endif
                         @if( Auth::check() )
-                        <a href="{{ route('users.edit', Auth::id()) }}" class="btn "><i class="far fa-thumbs-up"></i></a>
+                        <a href="{{ route('likes.show', Auth::id()) }}" class="btn "><i class="far fa-thumbs-up"></i></a>
                         @endif
-                        @if( Auth::check() )
+                        {{-- @if( Auth::check() )
                         <a href="{{ route('users.edit', Auth::id()) }}" class="btn "><i class="fas fa-book-open"></i></a>
-                        @endif
+                        @endif --}}
 
                         <!-- Authentication Links -->
                         @guest
