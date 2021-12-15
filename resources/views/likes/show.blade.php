@@ -7,7 +7,7 @@
                 <div class="card-header">
                     投稿一覧
                 </div>
-                @foreach ($posts as $post)
+                @foreach ($user->favorites as $post)
                 <div class="card-body">
                     <h5 class="card-title">{{ $post->brand }}</h5>
                     <p class="card-text">内容：{{ $post->body }}</p>

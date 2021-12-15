@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('posts', 'PostController');
 Route::resource('comments', 'CommentController');
 Route::resource('users', 'UserController');
+Route::resource('likes', 'LikeController');
 
 Route::get('login/twitter', 'Auth\LoginController@redirectToProvider')->name('login.twitter');
 Route::get('login/twitter/callback', 'Auth\LoginController@handleProviderCallback');
@@ -31,4 +32,3 @@ Route::get('posts/{post}/unfavorites', 'FavoriteController@destroy')->name('unfa
 
 Route::get('posts/{post}/countfavorites', 'FavoriteController@count');
 Route::get('posts/{post}/hasfavorites', 'FavoriteController@hasfavorite');
-
