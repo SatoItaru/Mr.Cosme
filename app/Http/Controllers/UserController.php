@@ -86,7 +86,7 @@ class UserController extends Controller
      */
     public function update(UserRequest $request, $id)
     {
-        $user = new User;
+        $user = new User();
 
         $user->image = $request->image;
 

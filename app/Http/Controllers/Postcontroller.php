@@ -49,10 +49,8 @@ class Postcontroller extends Controller
                         ->orWhere('detail', 'like', '%'.$value.'%')
                         ->orWhere('price', 'like', '%'.$value.'%');
             }
-
-
         }
-        if($order === 'popular'){
+        if($order === 'popular'){   
             $query=Post::withCount('favorites')->orderBy('favorites_count', 'desc');
         } elseif ($order === 'latest'){
             $query->orderBy('created_at', 'desc');
