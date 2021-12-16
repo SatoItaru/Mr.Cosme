@@ -24,14 +24,24 @@
                             </div>
                         </div>
 
+                            {{-- <div class="form-group row justify-content-center">
+                                <div class="col-md-8">
+                                    <select type="text" class="form-control" name="age">
+                                        <option value="">年代</option>
+                                        <option value="{{ old('age') }}">20代</option>
+                                        <option value="{{ old('age') }}">30代</option>
+                                        <option value="{{ old('age') }}">40代</option>
+                                        <option value="{{ old('age') }}">50代</option>
+                                    </select>
+                                </div>
+                            </div> --}}
                             <div class="form-group row justify-content-center">
                                 <div class="col-md-8">
                                     <select type="text" class="form-control" name="age">
                                         <option value="{{ old('age') }}">年代</option>
-                                        <option value="20代">20代</option>
-                                        <option value="30代">30代</option>
-                                        <option value="40代">40代</option>
-                                        <option value="50代">50代</option>
+                                        @foreach (Config::get('age.age_select') as $key => $val)
+                                            <option value="{{ $key }}">{{ $val }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>

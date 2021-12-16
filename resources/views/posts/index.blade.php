@@ -7,9 +7,21 @@
                 <div class="btn-group">
                     <select class="form-control" name="order" id="">
                         <div class="dropdown-menu">
+                            @if ($order === 'popular')
+                            <option value="popular" selected="selected">人気順</option>
+                            @else
                             <option value="popular">人気順</option>
-                            <option value="latest">新しい順</option>
-                            <option value="oldest">古い順</option>
+                            @endif
+                            @if ($order === 'latest')
+                            <option value="latest" selected="selected">新着順</option>
+                            @else
+                            <option value="latest">新着順</option>
+                            @endif
+                            @if ($order === 'oldest')
+                            <option value="oldest" selected="selected">投稿順</option>
+                            @else
+                            <option value="oldest">投稿順</option>
+                            @endif
                         </div>
                     </select>
                 </div>
@@ -34,21 +46,24 @@
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                     </ol>
-                    <div class="carousel-inner bg-secondary">
+                    <div class="carousel-inner bg-light">
                         @foreach ($post->images as $image)
                         <div class="carousel-item @if($loop->first) active @endif">
                             <img class="card-img-top d-block w-20" src="{{ $image->image_path }}" alt="Card image cap　slide image">
                         </div>
                         @endforeach
                     </div>
+
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
+
                     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
+
                 </div>
                     <div class="card-body">
                     <h5 class="card-title">{{ $post->brand }}</h5>
