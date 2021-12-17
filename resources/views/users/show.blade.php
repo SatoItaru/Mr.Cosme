@@ -13,12 +13,16 @@
                         <img src="{{ $user->image_path }}" class="icon rounded-circle img-thumbnail mb-3" alt="画像">
                         @endif
                     </div>
-                    <div>
+                    <div class="profile">
                         <h5>アカウントネーム : {{ $user->name }}</h5>
                         <h5>年代 : {{ $user->age }}</h5>
                         <h5>職業 : {{ $user->occupation }}</h5>
                         <h5>メールアドレス : {{ $user->email}}</h5>
-                        <a href="{{ route('users.edit', Auth::id()) }}" class="btn btn-primary">編集する</a>
+                    </div>
+                    <div>
+                        <a href="{{ route('users.edit', Auth::id()) }}" class="edit btn btn-primary">
+                            編集する
+                        </a>
                     </div>
                 </div>
             </div>
@@ -33,10 +37,10 @@
                                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                                 <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                             </ol>
-                            <div class="carousel-inner bg-secondary">
+                            <div class="carousel-inner">
                                 @foreach ($post->images as $image)
                                 <div class="carousel-item @if($loop->first) active @endif">
-                                    <img class="card-img-top d-block w-20" src="{{ $image->image_path }}" alt="Card image cap　slide image">
+                                    <img class="image card-img-top d-block w-20" src="{{ $image->image_path }}" alt="Card image cap　slide image">
                                 </div>
                                 @endforeach
                             </div>
