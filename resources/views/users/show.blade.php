@@ -1,16 +1,43 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="card col-md-8 mx-auto my-5 profile-show">
+    <div class="edit-profile">
+        <a href="{{ route('users.edit', Auth::id()) }}" class="btn">
+            <img src="{{ asset('assets/images/edit.png') }}" alt="" style="width: 20px; height:20px;">
+            編集する
+        </a>
+    </div>
+        <div class="row">
+            <div class="card-body col-md-5 profile-show-body">
+                @if ($user->image_path == null)
+                    <img src="{{ asset('assets/images/default.png') }}"class="profile-image" alt="">
+                @else
+                <div class="icon-container">
+                    <img src="{{ $user->image_path }}" class="icon rounded-circle img-thumbnail mb-3" alt="画像">
+                </div>
+                @endif
+            </div>
+            <div class="card-body col-5 profile-detail profile-show-body">
+                <p class="text-muted">アカウントネーム:{{ $user->name }}</p>
+                <p class="text-muted">年代:{{ $user->age }}</p>
+                <p class="text-muted">職業:{{ $user->occupation}}</p>
+                <p class="text-muted">メールアドレス:{{ $user->email}}</p>
+            </div>
+    </div>
+</div>
+<h2 class="text-center text-muted">投稿一覧</h2>
+<hr class="col-md-9">
 <div class="container">
-    <div class="row justify-content-center">
+    {{-- <div class="row justify-content-center">
         <div class="col-md-9">
-            <div class="card">
+            <div class="card col-md-6 mx-auto my-5 profile-show">
                 <div class="card-body d-flex flex-row">
-                    <div>
+                    <div class="icon-container">
                         @if ($user->image_path == null)
-                        <img src="{{ asset('assets/images/default.png') }}"class="icon rounded-circle img-thumbnail mb-3" alt="">
+                        <img src="{{ asset('assets/images/default.png') }}"class="icon img-thumbnail mb-3" alt="">
                         @else
-                        <img src="{{ $user->image_path }}" class="icon rounded-circle img-thumbnail mb-3" alt="画像">
+                        <img src="{{ $user->image_path }}" class="icon img-thumbnail mb-3" alt="画像">
                         @endif
                     </div>
                     <div class="profile">
@@ -26,11 +53,12 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="row justify-content-center">
                 <div class="col-md-9">
+                    <div class="col_3">
                     @foreach ($user->posts as $post)
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 17rem;">
                         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
                                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -58,13 +86,15 @@
                             <h5 class="card-title">{{ $post->brand }}</h5>
                             <p class="card-text">#{{ $post->cosme }}</p>
                             <p class="card-text">{{ $post->price }}円</p>
-                            <a href="{{ route('posts.show', $post->id) }}" class="detail btn btn-primary">詳細へ</a>
+                            <a href="{{ route('posts.show', $post->id) }}" class="detail btn-anime bgleft"><span>詳細へ</span></a>
+                            {{-- <a href="{{ route('posts.show', $post->id) }}" class="detail btn btn-primary">詳細へ</a> --}}
                             </div>
-                            <div class="card-footer">
+                            <div class="card-footer created">
                                 <p class="card-text">投稿日:{{ $post->created_at }}</p>
                             </div>
                         </div>
                     @endforeach
+                    </div>
                     {{-- <div class="card text-center">
                         <div class="card-header">
                             投稿一覧
