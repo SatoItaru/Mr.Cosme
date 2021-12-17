@@ -37,45 +37,49 @@
                     </button>
                 </div>
             </form>
+            <h2 class="text-center text-muted">投稿一覧</h2>
+            <hr class="col-md-12">
+            <div class="col_3">
             @foreach ($posts as $post)
-            <div class="card" style="width: 17rem;">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        @foreach ($post->images as $image)
-                        <div class="carousel-item @if($loop->first) active @endif">
-                            <img class="image card-img-top d-block w-20" src="{{ $image->image_path }}" alt="Card image cap　slide image">
+                <div class="card" style="width: 17rem;">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            @foreach ($post->images as $image)
+                            <div class="carousel-item @if($loop->first) active @endif">
+                                <img class="image card-img-top d-block w-20" src="{{ $image->image_path }}" alt="Card image cap　slide image">
+                            </div>
+                            @endforeach
                         </div>
-                        @endforeach
-                    </div>
 
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
 
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
 
-                </div>
-                    <div class="card-body">
-                    <h5 class="card-title">{{ $post->brand }}</h5>
-                    <p class="card-text">#{{ $post->cosme }}</p>
-                    <p class="card-text">{{ $post->price }}円</p>
-                    <a href="{{ route('posts.show', $post->id) }}" class="detail btn btn-primary">詳細へ</a>
                     </div>
-                    <div class="card-footer">
-                        <p class="card-text">投稿日:{{ $post->created_at }}</p>
+                        <div class="card-body">
+                        <h5 class="card-title">{{ $post->brand }}</h5>
+                        <p class="card-text">#{{ $post->cosme }}</p>
+                        <p class="card-text">{{ $post->price }}円</p>
+                        <a href="{{ route('posts.show', $post->id) }}" class="detail btn btn-primary">詳細へ</a>
+                        </div>
+                        <div class="card-footer created">
+                            <p class="card-text">投稿日:{{ $post->created_at }}</p>
+                        </div>
                     </div>
-                </div>
             @endforeach
+            </div>
             {{-- <div class="card text-center">
 
                 <div class="card-header">
@@ -99,9 +103,9 @@
                 @endforeach
             </div> --}}
         </div>
-        <div class="col-md-2">
-            <a href="{{ route('posts.create') }}" class="btn btn-primary">新規投稿</a>
-        </div>
+            <div class="col-md-2">
+                <a href="{{ route('posts.create') }}" class="btn btn-primary">新規投稿</a>
+            </div>
     </div>
 </div>
 @endsection
