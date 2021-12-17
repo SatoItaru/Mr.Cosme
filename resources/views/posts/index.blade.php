@@ -71,6 +71,9 @@
                     <p class="card-text">{{ $post->price }}円</p>
                     <a href="{{ route('posts.show', $post->id) }}" class="detail btn btn-primary">詳細へ</a>
                     </div>
+                    <div class="card-footer">
+                        <p class="card-text">投稿日:{{ $post->created_at }}</p>
+                    </div>
                 </div>
             @endforeach
             {{-- <div class="card text-center">
