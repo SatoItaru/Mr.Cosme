@@ -12,15 +12,15 @@
                             @else
                             <option value="popular">人気順</option>
                             @endif
-                            @if ($order === 'latest')
-                            <option value="latest" selected="selected">新着順</option>
+                            @if ($order === 'expensive')
+                            <option value="expensive" selected="selected">値段（高い順）</option>
                             @else
-                            <option value="latest">新着順</option>
+                            <option value="expensive">値段（高い順）</option>
                             @endif
-                            @if ($order === 'oldest')
-                            <option value="oldest" selected="selected">投稿順</option>
+                            @if ($order === 'cheap')
+                            <option value="cheap" selected="selected">値段（安い順）</option>
                             @else
-                            <option value="oldest">投稿順</option>
+                            <option value="cheap">値段（安い順）</option>
                             @endif
                         </div>
                     </select>
@@ -46,10 +46,10 @@
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                     </ol>
-                    <div class="carousel-inner bg-light">
+                    <div class="carousel-inner">
                         @foreach ($post->images as $image)
                         <div class="carousel-item @if($loop->first) active @endif">
-                            <img class="card-img-top d-block w-20" src="{{ $image->image_path }}" alt="Card image cap　slide image">
+                            <img class="image card-img-top d-block w-20" src="{{ $image->image_path }}" alt="Card image cap　slide image">
                         </div>
                         @endforeach
                     </div>

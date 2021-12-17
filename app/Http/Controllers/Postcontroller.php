@@ -50,12 +50,12 @@ class Postcontroller extends Controller
                         ->orWhere('price', 'like', '%'.$value.'%');
             }
         }
-        if($order === 'popular'){   
+        if($order === 'popular'){
             $query=Post::withCount('favorites')->orderBy('favorites_count', 'desc');
-        } elseif ($order === 'latest'){
-            $query->orderBy('created_at', 'desc');
-        } elseif ($order === 'oldest'){
-            $query->orderBy('created_at', 'asc');
+        } elseif ($order === 'expensive'){
+            $query->orderBy('price', 'desc');
+        } elseif ($order === 'cheap'){
+            $query->orderBy('price', 'asc');
         }
         // 上記で取得した$queryをページネートにし、変数$usersに代入
             $posts = $query->paginate(20);
