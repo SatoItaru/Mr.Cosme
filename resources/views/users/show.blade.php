@@ -20,7 +20,8 @@
                         <h5>メールアドレス : {{ $user->email}}</h5>
                     </div>
                     <div>
-                        <a href="{{ route('users.edit', Auth::id()) }}" class="edit btn btn-primary">
+                        <a href="{{ route('users.edit', Auth::id()) }}" class=" edit btn">
+                            <img src="{{ asset('assets/images/edit.png') }}" alt="" style="width: 20px; height:20px;">
                             編集する
                         </a>
                     </div>
@@ -56,7 +57,7 @@
                             <div class="card-body">
                             <h5 class="card-title">{{ $post->brand }}</h5>
                             <p class="card-text">{{ $post->detail }}</p>
-                            <a href="{{ route('posts.show', $post->id) }}" class="btn btn-primary">詳細へ</a>
+                            <a href="{{ route('posts.show', $post->id) }}" class="detail btn btn-primary">詳細へ</a>
                             </div>
                         </div>
                     @endforeach
