@@ -56,7 +56,8 @@
                         </div>
                             <div class="card-body">
                             <h5 class="card-title">{{ $post->brand }}</h5>
-                            <p class="card-text">{{ $post->detail }}</p>
+                            <p class="card-text">#{{ $post->cosme }}</p>
+                            <p class="card-text">{{ $post->price }}円</p>
                             <a href="{{ route('posts.show', $post->id) }}" class="detail btn btn-primary">詳細へ</a>
                             </div>
                         </div>
