@@ -11041,8 +11041,8 @@
         margin: 20px 50px 0 0;
     }
     .profile-image {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         background: #ddd;
         box-shadow: 5px 5px 20px #c8c9cc, -5px -5px 20px #ffffff;
@@ -11092,12 +11092,13 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-            border: 1px solid #555;/* ボーダーの色と太さ */
-            padding: 10px 30px;
-            text-align: center;
-            outline: none;
+        border: 1px solid #555;/* ボーダーの色と太さ */
+        border-radius:30px;
+        padding: 10px 30px;
+        text-align: center;
+        outline: none;
             /*アニメーションの指定*/
-            transition: ease .2s;
+        transition: ease .2s;
         }
 
         /*ボタン内spanの形状*/

@@ -72,7 +72,7 @@
                         <h5 class="card-title">{{ $post->brand }}</h5>
                         <p class="card-text">#{{ $post->cosme }}</p>
                         <p class="card-text">{{ $post->price }}円</p>
-                        <a href="{{ route('posts.show', $post->id) }}" class="detail btn btn-primary">詳細へ</a>
+                        <a href="{{ route('posts.show', $post->id) }}" class="detail btn-anime bgleft"><span>詳細へ</span></a>
                         </div>
                         <div class="card-footer created">
                             <p class="card-text">投稿日:{{ $post->created_at }}</p>
