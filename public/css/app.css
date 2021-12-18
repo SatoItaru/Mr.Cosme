@@ -2654,6 +2654,7 @@
     line-height: 1.6;
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    outline: none
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -2705,6 +2706,7 @@
     background-color: #227dc7;
     border-color: #2176bd;
     box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
+    outline: none
     }
 
     .btn-primary.disabled,
@@ -2712,6 +2714,7 @@
     color: #fff;
     background-color: #3490dc;
     border-color: #3490dc;
+    outline: none
     }
 
     .btn-primary:not(:disabled):not(.disabled):active,
@@ -2720,12 +2723,14 @@
     color: #fff;
     background-color: #2176bd;
     border-color: #1f6fb2;
+    outline: none
     }
 
     .btn-primary:not(:disabled):not(.disabled):active:focus,
     .btn-primary:not(:disabled):not(.disabled).active:focus,
     .show > .btn-primary.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
+    outline: none
     }
 
     .btn-secondary {
@@ -11063,27 +11068,6 @@
     *, *:before, *:after {
         box-sizing: border-box;
     }
-    .col_3{
-        width: 100%;
-        display: flex;
-        display: -ms-flexbox; /* IE10 */
-        flex-wrap: wrap;
-        -ms-flex-wrap: wrap; /* IE10 */
-    }
-    .col_3 > div{
-        width: 33.33333%;
-        padding: 0;
-    }
-    @media screen and (max-width: 960px) {
-        .col_3 > div{
-            width: 50%;
-        }
-    }
-    @media screen and (max-width: 480px) {
-        .col_3 > div{
-            width: 100%;
-        }
-    }
 
     .btn-anime {
         /*アニメーションの起点とするためrelativeを指定*/
@@ -11146,4 +11130,38 @@
 
     .post-icon:hover {
         opacity: 0.8;
+    }
+
+    .search-circle {
+        border-radius: 50%;
+        position: absolute;
+        right: 35px;
+        top: 65px;
+        color:rgba(0,0,0,0);
+        outline: none
+    }
+
+    .clear-button {
+        position: relative;
+        right: 20px;
+    }
+
+    .post-button {
+        position: relative;
+        right: 10px;
+    }
+
+    .like-button {
+        position: relative;
+        right: 20px;
+    }
+
+    .cosme-button {
+        position: relative;
+        right: 30px;
+    }
+
+    .home-button {
+        position: relative;
+        right: 40px;
     }
