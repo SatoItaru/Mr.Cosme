@@ -36,7 +36,7 @@
                                 </select>
 
                                 <select type="text" class="form-control" name="occupation">
-                                    <option value="{{ $user->occupation }}">職業</option>
+                                    {{-- <option value="{{ $user->occupation }}">職業</option> --}}
                                         @foreach (Config::get('occupation.job_name') as $key => $val)
                                             @if ($val === $user->occupation)
                                                 <option value="{{ $key }}" selected="selected">{{ $val }}</option>
