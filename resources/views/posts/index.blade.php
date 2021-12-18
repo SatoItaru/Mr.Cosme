@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <h2 class="text-center text-muted">投稿一覧</h2>
+        <h2 class="header-text text-muted">投稿一覧</h2>
             <hr class="col-md-12">
         <div class="col-md-9">
             <form class="mb-2 mt-4 text-center" method="GET" action="{{ route('posts.index') }}">
@@ -76,7 +76,7 @@
                         <a href="{{ route('posts.show', $post->id) }}" class="detail btn-anime bgleft"><span>詳細へ</span></a>
                         </div>
                         <div class="card-footer created">
-                            <p class="card-text">投稿日:{{ $post->created_at }}</p>
+                            <p class="text-center text-muted">投稿日:{{ $post->created_at }}</p>
                         </div>
                     </div>
             </div>

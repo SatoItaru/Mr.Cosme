@@ -11165,3 +11165,59 @@
         position: relative;
         right: 40px;
     }
+
+    .header-text {
+        position: relative;
+        right: 400px;
+    }
+
+    .post-detail {
+        position: relative;
+    left: 90px;
+    }
+
+    .comment {
+        position: relative;
+    right: 100px;
+    }
+
+    .like {
+        position: relative;
+    left: 100px;
+    top: -50px;
+    }
+
+    .count {
+        position: relative;
+    left: 40px;
+    top: -30px;
+    }
+
+    .comment-body {
+        position: relative;
+        top: -15px;
+    }
+
+    .comment-name {
+        position: absolute;
+    top: 50px;
+    right: 45px;
+    }
+
+    .comment-age{
+        position: absolute;
+    top: 50px;
+    right: -20px
+    }
+
+    .comment-occupation {
+        position: absolute;
+    top: 50px;
+    right: -110px;
+    }
+
+    .comment-time {
+        position: relative;
+    bottom: 120px;
+    left: 230px;
+    }

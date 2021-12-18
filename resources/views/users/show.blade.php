@@ -26,8 +26,8 @@
             </div>
     </div>
 </div>
-<h2 class="text-center text-muted">投稿一覧</h2>
-<hr class="col-md-9">
+<h2 class="header-text text-muted">投稿一覧</h2>
+<hr class="col-md-12">
 <div class="container">
     {{-- <div class="row justify-content-center">
         <div class="col-md-9">
@@ -56,8 +56,9 @@
             </div> --}}
             <div class="row justify-content-center">
                 <div class="col-md-9">
-                    <div class="col_3">
+                    <div class="row">
                     @foreach ($user->posts as $post)
+                    <div class="col-md-4 my-2">
                     <div class="card" style="width: 17rem;">
                         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
@@ -93,7 +94,8 @@
                                 <p class="card-text">投稿日:{{ $post->created_at }}</p>
                             </div>
                         </div>
-                    @endforeach
+                    </div>
+                        @endforeach
                     </div>
                     {{-- <div class="card text-center">
                         <div class="card-header">
