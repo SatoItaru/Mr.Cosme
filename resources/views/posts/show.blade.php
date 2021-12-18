@@ -3,13 +3,15 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        <h2 class="header-text text-muted">詳細</h2>
+            <hr class="col-md-12">
         <div class="col-md-10">
-            <div class="card-body col-md-6 float-right">
-                <p class="card-text">ブランド : {{ $post->brand }}</p>
-                <p class="card-text">アイテム名 : {{ $post->cosme }}</p>
-                <p class="card-text">価格 : {{ $post->price }}円</p>
-                <p class="card-text">＜使い方＞<br>{{ $post->body }}</p>
-                <p class="card-text">＜使った感想＞<br>{{ $post->detail }}</p>
+            <div class="card-body col-md-6 float-left post-detail">
+                <h2 class="text-muted">{{ $post->brand }}</h2>
+                <h2 class="text-muted">{{ $post->cosme }}</h2>
+                <h2 class="text-muted">{{ $post->price }}円</h2>
+                <p class="text-muted">＜使い方＞<br>{{ $post->body }}</p>
+                <p class="text-muted">＜使った感想＞<br>{{ $post->detail }}</p>
                 {{-- <p>投稿日時：{{ $post->created_at }}</p> --}}
                 {{-- <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-primary">編集する</a> --}}
                 {{-- <form action='{{ route('posts.destroy', $post->id) }}' method='post'>
@@ -18,7 +20,7 @@
                     <input type='submit' value='削除' class="btn btn-danger" onclick='return confirm("削除しますか？？");'>
                 </form> --}}
             </div>
-                <div id="carouselExampleIndicators" class="carousel slide col-md-5 float-left" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide col-md-6 float-right" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -43,9 +45,10 @@
                 </div>
             </div>
         </div>
+        <hr class="col-md-12">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <button type="submit" class="btn btn-light text-secondary" data-toggle="modal" data-target="#exampleModalCenter"　width="40" height="40">
+            <button type="submit" class="btn text-muted text-secondary" data-toggle="modal" data-target="#exampleModalCenter"　width="40" height="40">
                 <img src="https://res.cloudinary.com/dqxuxpwv9/image/upload/v1639018170/comment_dei2ik.png" width="40" height="40" alt="">コメント：{{$post->comments->count() }}
             </button>
             <div class="row justify-content-center">

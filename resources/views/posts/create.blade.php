@@ -6,7 +6,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <h2 class="text-center text-muted">新規投稿作成</h2>
+        <h2 class="header-text text-muted">新規投稿作成</h2>
             <hr class="col-md-12">
         <div class="col-md-8">
             @if ($errors->any())

@@ -11165,3 +11165,13 @@
         position: relative;
         right: 40px;
     }
+
+    .header-text {
+        position: relative;
+        right: 400px;
+    }
+
+    .post-detail {
+        position: relative;
+    left: 90px;
+    }
