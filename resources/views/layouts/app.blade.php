@@ -27,7 +27,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ route('posts.index') }}">
                     {{-- {{ config('app.name', 'Mr.Cosme') }} --}}
-                    <p>Mr.Cosme</p>
+                    <h2>Mr.Cosme</h2>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -41,13 +41,16 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         @if( Auth::check() )
-                        <a href="{{ route('users.edit', Auth::id()) }}" class="btn "><i class="far fa-question-circle"></i></a>
+                        <a href="{{ route('posts.index', Auth::id()) }}" class="home-button detail btn-anime bgleft text-center text-muted"><span><i class="fas fa-home"></i>ホーム</span></a>
                         @endif
                         @if( Auth::check() )
-                        <a href="{{ route('likes.show', Auth::id()) }}" class="btn "><i class="far fa-thumbs-up"></i></a>
+                        <a href="{{ route('users.edit', Auth::id()) }}" class="cosme-button detail btn-anime bgleft text-center text-muted"><span><i class="far fa-question-circle"></i>コスメの使い方</span></a>
                         @endif
                         @if( Auth::check() )
-                            <a href="{{ route('posts.create') }}" class="btn btn-primary">新規投稿</a>
+                        <a href="{{ route('likes.show', Auth::id()) }}" class="like-button detail btn-anime bgleft text-center text-muted"><span><i class="far fa-thumbs-up"></i>いいねした投稿</span></a>
+                        @endif
+                        @if( Auth::check() )
+                            <a href="{{ route('posts.create') }}" class="post-button detail btn-anime bgleft text-center text-muted"><span><i class="fas fa-plus"></i>投稿する</span></a>
                         @endif
 
                         <!-- Authentication Links -->

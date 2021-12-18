@@ -5,8 +5,9 @@
         <h2 class="text-center text-muted">いいねした投稿一覧</h2>
             <hr class="col-md-12">
         <div class="col-md-9">
-            <div class="col_3">
+            <div class="row">
                 @foreach ($user->favorites as $post)
+                <div class="col-md-4 my-2">
                 <div class="card" style="width: 17rem;">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -32,9 +33,9 @@
                         </a>
                     </div>
                         <div class="card-body">
-                        <h5 class="card-title">{{ $post->brand }}</h5>
-                        <p class="card-text">#{{ $post->cosme }}</p>
-                        <p class="card-text">{{ $post->price }}円</p>
+                        <h5 class="text-center text-muted">{{ $post->brand }}</h5>
+                        <p class="text-center text-muted">#{{ $post->cosme }}</p>
+                        <p class="text-center text-muted">{{ $post->price }}円</p>
                         <a href="{{ route('posts.show', $post->id) }}" class="detail btn-anime bgleft"><span>詳細へ</span></a>
                         {{-- <a href="{{ route('posts.show', $post->id) }}" class="detail btn btn-primary">詳細へ</a> --}}
                         </div>
@@ -42,8 +43,9 @@
                             <p class="card-text">投稿日:{{ $post->created_at }}</p>
                         </div>
                     </div>
-                @endforeach
                 </div>
+                    @endforeach
+            </div>
             {{-- <div class="card text-center">
                 <div class="card-header">
                     投稿一覧

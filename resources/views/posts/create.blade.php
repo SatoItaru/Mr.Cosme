@@ -6,6 +6,8 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        <h2 class="text-center text-muted">新規投稿作成</h2>
+            <hr class="col-md-12">
         <div class="col-md-8">
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -54,7 +56,7 @@
                     </div>
                     <div style="text-transform: none;"><i class="far fa-lightbulb"></i>ビフォーアフターを載せてみましょう
                     </div>
-                        <button type="submit" class="btn btn-primary">作成する</button>
+                        <button type="submit" class="detail btn-anime bgleft text-center text-muted"><span>作成する</span></button>
                 </form>
             </div>
         </div>

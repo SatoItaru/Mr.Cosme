@@ -29,18 +29,19 @@
                 </div>
                 <input class="card form-control my-2 mr-5" type="search" placeholder="フリーワード検索" name="search" value="@if (isset($search)) {{ $search }} @endif">
                 <div class="d-flex justify-content-center">
-                    <button class="btn btn-info my-2 rounded-circle" type="submit">
-                        <img src="{{ asset('assets/images/search.png') }}" class="rounded-circle" width="20" height="20" alt="">
+                    <button class="btn search-circle" type="submit">
+                        <img src="{{ asset('assets/images/search.png') }}"width="30" height="30" alt="">
                     </button>
-                    <button class="btn btn-secondary my-2 ml-5">
-                        <a href="{{ route('posts.index') }}" class="text-white">
+                    <button class="btn my-2 ml-5">
+                        <a href="{{ route('posts.index') }}" class="clear-button detail btn-anime bgleft"><span>
                             クリア
-                        </a>
+                        </span></a>
                     </button>
                 </div>
             </form>
-            <div class="col_3">
+            <div class="row">
             @foreach ($posts as $post)
+            <div class="col-md-4 my-2">
                 <div class="card" style="width: 17rem;">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -69,18 +70,20 @@
 
                     </div>
                         <div class="card-body">
-                        <h5 class="card-title">{{ $post->brand }}</h5>
-                        <p class="card-text">#{{ $post->cosme }}</p>
-                        <p class="card-text">{{ $post->price }}円</p>
+                        <h2 class="text-center text-muted">{{ $post->brand }}</h2>
+                        <p class="text-center text-muted">#{{ $post->cosme }}</p>
+                        <p class="text-center text-muted">{{ $post->price }}円</p>
                         <a href="{{ route('posts.show', $post->id) }}" class="detail btn-anime bgleft"><span>詳細へ</span></a>
                         </div>
                         <div class="card-footer created">
                             <p class="card-text">投稿日:{{ $post->created_at }}</p>
                         </div>
                     </div>
+            </div>
             @endforeach
             </div>
-            {{-- <div class="card text-center">
+
+            {{-- <div class="card ">
 
                 <div class="card-header">
                     投稿一覧
