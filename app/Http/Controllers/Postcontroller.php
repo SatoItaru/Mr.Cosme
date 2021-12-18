@@ -58,14 +58,8 @@ class Postcontroller extends Controller
             $query->orderBy('price', 'asc');
         }
         // 上記で取得した$queryをページネートにし、変数$usersに代入
-            $posts = $query->paginate(20);
-        // ビューにpostsとsearchを変数として渡す
-        // return view('posts.index')
-        //     ->with([
-        //         'posts' => $posts,
-        //         'search' => $search,
-        //         'order' => $order,
-        //     ]);
+        $posts = $query->paginate(20);
+
         return view('posts.index', compact('posts','search','order'));
     }
 

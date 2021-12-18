@@ -25,7 +25,7 @@
                                 <input type="text" class="form-control" placeholder='新しいアカウントネーム' value="{{ $user->name }}" name='name'>
 
                                 <select type="text" class="form-control" name="age">
-                                    <option value="{{ $user->age }}">年代</option>
+                                    {{-- <option value="{{ $user->age }}">年代</option> --}}
                                         @foreach (Config::get('age.age_select') as $key => $val)
                                             @if ($val === $user->age)
                                                 <option value="{{ $key }}" selected="selected">{{ $val }}</option>

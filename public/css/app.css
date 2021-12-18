@@ -10985,6 +10985,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
+        box-shadow: 5px 5px 20px #c8c9cc, -5px -5px 20px #ffffff;
         transform: translate(-50%, -50%);
         -o-object-fit: cover;
         object-fit: cover;
@@ -11043,6 +11044,7 @@
     .profile-image {
         width: 150px;
         height: 150px;
+        position: absolute;
         border-radius: 50%;
         background: #ddd;
         box-shadow: 5px 5px 20px #c8c9cc, -5px -5px 20px #ffffff;
