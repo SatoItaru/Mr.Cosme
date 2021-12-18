@@ -51,7 +51,7 @@ class Postcontroller extends Controller
             }
         }
         if($order === 'popular'){
-            $query=Post::withCount('favorites')->orderBy('favorites_count', 'desc');
+            $query->withCount('favorites')->orderBy('favorites_count', 'desc');
         } elseif ($order === 'expensive'){
             $query->orderBy('price', 'desc');
         } elseif ($order === 'cheap'){
