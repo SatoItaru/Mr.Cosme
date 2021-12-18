@@ -2,6 +2,8 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        <h2 class="text-center text-muted">投稿一覧</h2>
+            <hr class="col-md-12">
         <div class="col-md-9">
             <form class="mb-2 mt-4 text-center" method="GET" action="{{ route('posts.index') }}">
                 <div class="btn-group">
@@ -37,8 +39,6 @@
                     </button>
                 </div>
             </form>
-            <h2 class="text-center text-muted">投稿一覧</h2>
-            <hr class="col-md-12">
             <div class="col_3">
             @foreach ($posts as $post)
                 <div class="card" style="width: 17rem;">
@@ -103,9 +103,6 @@
                 @endforeach
             </div> --}}
         </div>
-            <div class="col-md-2">
-                <a href="{{ route('posts.create') }}" class="btn btn-primary">新規投稿</a>
-            </div>
     </div>
 </div>
 @endsection

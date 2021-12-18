@@ -46,9 +46,9 @@
                         @if( Auth::check() )
                         <a href="{{ route('likes.show', Auth::id()) }}" class="btn "><i class="far fa-thumbs-up"></i></a>
                         @endif
-                        {{-- @if( Auth::check() )
-                        <a href="{{ route('users.edit', Auth::id()) }}" class="btn "><i class="fas fa-book-open"></i></a>
-                        @endif --}}
+                        @if( Auth::check() )
+                            <a href="{{ route('posts.create') }}" class="btn btn-primary">新規投稿</a>
+                        @endif
 
                         <!-- Authentication Links -->
                         @guest
