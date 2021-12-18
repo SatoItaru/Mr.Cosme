@@ -76,7 +76,7 @@
                         <a href="{{ route('posts.show', $post->id) }}" class="detail btn-anime bgleft"><span>詳細へ</span></a>
                         </div>
                         <div class="card-footer created">
-                            <p class="card-text">投稿日:{{ $post->created_at }}</p>
+                            <p class="text-center text-muted">投稿日:{{ $post->created_at }}</p>
                         </div>
                     </div>
             </div>
