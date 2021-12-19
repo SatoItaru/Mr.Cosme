@@ -6732,6 +6732,10 @@
     .carousel {
     position: relative;
     }
+    .carousel-show {
+    position: relative;
+    left: -33px;
+    }
 
     .carousel.pointer-event {
     touch-action: pan-y;
@@ -11184,7 +11188,7 @@
     }
     .header-detail {
         position: relative;
-        right: 525px;
+        right: 382px;
     }
     .header-cosme {
         position: relative;
@@ -11193,17 +11197,17 @@
 
     .post-detail {
         position: relative;
-    left: -12px;
+    left: 31px;
     }
 
     .comment {
         position: relative;
-    right: 100px;
+    right: 12px;
     }
 
     .like {
         position: relative;
-    left: 100px;
+    left: 170px;
     top: -50px;
     }
 
@@ -11239,7 +11243,7 @@
     .comment-time {
         position: relative;
     bottom: 120px;
-    left: 230px;
+    left: 316px;
     }
 
     .cosme-arrow {
