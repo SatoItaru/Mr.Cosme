@@ -23,6 +23,7 @@ Route::resource('posts', 'Postcontroller');
 Route::resource('comments', 'CommentController');
 Route::resource('users', 'UserController');
 Route::resource('likes', 'LikeController');
+Route::resource('cosmes', 'CosmeController');
 
 Route::get('login/twitter', 'Auth\LoginController@redirectToProvider')->name('login.twitter');
 Route::get('login/twitter/callback', 'Auth\LoginController@handleProviderCallback');
