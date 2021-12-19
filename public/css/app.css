@@ -11168,12 +11168,28 @@
 
     .header-text {
         position: relative;
-        right: 400px;
+        right: 430px;
+    }
+    .header-post {
+        position: relative;
+        right: 500px;
+    }
+    .header-create {
+        position: relative;
+        right: 470px;
+    }
+    .header-user {
+        position: relative;
+        left: 134px;
+    }
+    .header-detail {
+        position: relative;
+        right: 525px;
     }
 
     .post-detail {
         position: relative;
-    left: 90px;
+    left: -12px;
     }
 
     .comment {
