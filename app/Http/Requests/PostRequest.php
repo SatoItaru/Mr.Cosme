@@ -44,8 +44,8 @@ class PostRequest extends FormRequest
             'body.required' => '使い方を入れてください',
             'detail.required' => '使った感想を入れてください',
             'image1.required' => '画像を載せてください',
-            'image1.mimes'    => 'ファイルタイプをjpeg,jpg,png,gifに設定してください。',
-            'image1.max'      => 'ファイルサイズを10MB以下に設定してください。',
+            // 'image1.mimes'    => 'ファイルタイプをjpeg,jpg,png,gifに設定してください。',
+            // 'image1.max'      => 'ファイルサイズを10MB以下に設定してください。',
         ];
     }
 }
