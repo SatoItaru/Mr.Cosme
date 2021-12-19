@@ -26,8 +26,8 @@
             </div>
     </div>
 </div>
-<h2 class="header-text text-muted">投稿一覧</h2>
-<hr class="col-md-12">
+<h2 class="header-user text-muted">投稿一覧</h2>
+<hr class="col-md-11">
 <div class="container">
     {{-- <div class="row justify-content-center">
         <div class="col-md-9">
