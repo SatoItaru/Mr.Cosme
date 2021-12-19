@@ -44,7 +44,7 @@
                         <a href="{{ route('posts.index', Auth::id()) }}" class="home-button detail btn-anime bgleft text-center text-muted"><span><i class="fas fa-home"></i>ホーム</span></a>
                         @endif
                         @if( Auth::check() )
-                        <a href="{{ route('users.edit', Auth::id()) }}" class="cosme-button detail btn-anime bgleft text-center text-muted"><span><i class="far fa-question-circle"></i>コスメの使い方</span></a>
+                        <a href="{{ route('cosmes.show', Auth::id()) }}" class="cosme-button detail btn-anime bgleft text-center text-muted"><span><i class="far fa-question-circle"></i>コスメの使い方</span></a>
                         @endif
                         @if( Auth::check() )
                         <a href="{{ route('likes.show', Auth::id()) }}" class="like-button detail btn-anime bgleft text-center text-muted"><span><i class="far fa-thumbs-up"></i>いいねした投稿</span></a>

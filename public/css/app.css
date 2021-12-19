@@ -11186,6 +11186,10 @@
         position: relative;
         right: 525px;
     }
+    .header-cosme {
+        position: relative;
+        right: 482px;
+    }
 
     .post-detail {
         position: relative;
@@ -11236,4 +11240,10 @@
         position: relative;
     bottom: 120px;
     left: 230px;
+    }
+
+    .cosme-arrow {
+        position: absolute;
+    width: 30px;
+    left: 450px;
     }

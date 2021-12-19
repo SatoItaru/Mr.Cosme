@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header text-center">{{ __('新規登録') }}</div>
+                <div class="card-header text-center text-muted">{{ __('新規登録') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -89,8 +89,8 @@
 
                         <div class="form-group row justify-content-center">
                             <div class="col-md-6 text-center">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                <button type="submit" class="detail btn-anime bgleft text-center text-muted">
+                                    <a href="{{ __('Register') }}"><span>新規登録</span></a>
                                 </button>
                             </div>
                         </div>
