@@ -27,7 +27,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ route('posts.index') }}">
                     {{-- {{ config('app.name', 'Mr.Cosme') }} --}}
-                    <h2>Mr.Cosme</h2>
+                    <h2 class="title-header">Mr.Cosme</h2>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

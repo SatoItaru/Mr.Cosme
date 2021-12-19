@@ -11148,35 +11148,35 @@
 
     .post-button {
         position: relative;
-        right: 10px;
+        right: 79px;
     }
 
     .like-button {
         position: relative;
-        right: 20px;
+        right: 89px;
     }
 
     .cosme-button {
         position: relative;
-        right: 30px;
+        right: 99px;
     }
 
     .home-button {
         position: relative;
-        right: 40px;
+        right: 109px;
     }
 
     .header-text {
         position: relative;
-        right: 430px;
+        right: 285px;
     }
     .header-post {
         position: relative;
-        right: 500px;
+        right: 355px;
     }
     .header-create {
         position: relative;
-        right: 470px;
+        right: 329px;
     }
     .header-user {
         position: relative;
@@ -11188,7 +11188,7 @@
     }
     .header-cosme {
         position: relative;
-        right: 482px;
+        right: 341px;
     }
 
     .post-detail {
@@ -11246,4 +11246,9 @@
         position: absolute;
     width: 30px;
     left: 450px;
+    }
+
+    .title-header {
+        position: relative;
+    left: 142px;
     }

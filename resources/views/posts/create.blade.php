@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
         <h2 class="header-create text-muted">新規投稿作成</h2>
             <hr class="col-md-12">
-        <div class="col-md-8">
+        <div class="col-md-9">
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -41,11 +41,11 @@
 
                     <div class="form-group">
                         {{-- <label>使い方</label> --}}
-                        <textarea class="form-control" placeholder="コスメの使い方" rows="3" name="body"></textarea>
+                        <textarea class="form-control" placeholder="コスメの使い方" rows="2" name="body"></textarea>
                     </div>
                     <div class="form-group">
                         {{-- <label>使った感想</label> --}}
-                        <textarea class="form-control" placeholder="コスメを使った感想" rows="5" name="detail"></textarea>
+                        <textarea class="form-control" placeholder="コスメを使った感想" rows="4" name="detail"></textarea>
                     </div>
                     <div class="form-group">
                             <label for="image">画像</label>
