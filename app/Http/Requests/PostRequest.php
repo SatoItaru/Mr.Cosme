@@ -30,7 +30,7 @@ class PostRequest extends FormRequest
             'body' => 'required',
             'detail' => 'required',
             'image1' => 'required',
-            // 'image1' => 'mimes:jpeg,jpg,png,gif|max:10240',
+            'image1' => 'mimes:jpeg,jpg,png,gif|max:10240',
         ];
     }
 
