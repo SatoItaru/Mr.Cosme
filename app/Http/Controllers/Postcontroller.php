@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
 use JD\Cloudder\Facades\Cloudder;
 
-class Postcontroller extends Controller
+class PostController extends Controller
 {
     public function __construct()
     {
