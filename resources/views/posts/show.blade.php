@@ -20,7 +20,7 @@
                     <input type='submit' value='削除' class="btn btn-danger" onclick='return confirm("削除しますか？？");'>
                 </form> --}}
             </div>
-                <div id="carouselExampleIndicators" class="carousel slide col-md-6 float-right" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel-show slide col-md-6 float-right" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -30,7 +30,7 @@
                     <div class="carousel-inner bg-secondary">
                         @foreach ($post->images as $image)
                         <div class="carousel-item @if($loop->first) active @endif">
-                            <img class="d-block w-20" src="{{ $image->image_path }}" alt="slide image">
+                            <img class="" src="{{ $image->image_path }}" alt="slide image">
                         </div>
                         @endforeach
                     </div>
@@ -47,7 +47,7 @@
         </div>
         <hr class="col-md-12">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-9">
             <button type="submit" class="btn text-muted text-secondary comment" data-toggle="modal" data-target="#exampleModalCenter"　width="40" height="40">
                 <img src="https://res.cloudinary.com/dqxuxpwv9/image/upload/v1639018170/comment_dei2ik.png" width="40" height="40" alt="">コメント：{{$post->comments->count() }}
             </button>
