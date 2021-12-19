@@ -29,8 +29,8 @@ class PostRequest extends FormRequest
             'price' => 'required',
             'body' => 'required',
             'detail' => 'required',
-            'image' => 'required',
-            'image' => 'mimes:jpeg,jpg,png,gif|max:10240',
+            'image1' => 'required',
+            // 'image1' => 'mimes:jpeg,jpg,png,gif|max:10240',
         ];
     }
 
@@ -43,9 +43,9 @@ class PostRequest extends FormRequest
             'price.required' => '価格を入れてください',
             'body.required' => '使い方を入れてください',
             'detail.required' => '使った感想を入れてください',
-            'image.required' => '画像を載せてください',
-            'image.mimes'    => 'ファイルタイプをjpeg,jpg,png,gifに設定してください。',
-            'image.max'      => 'ファイルサイズを10MB以下に設定してください。',
+            'image1.required' => '画像を載せてください',
+            // 'image1.mimes'    => 'ファイルタイプをjpeg,jpg,png,gifに設定してください。',
+            // 'image1.max'      => 'ファイルサイズを10MB以下に設定してください。',
         ];
     }
 }
