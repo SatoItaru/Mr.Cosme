@@ -10,19 +10,19 @@
                     <select class="form-control" name="order" id="">
                         <div class="dropdown-menu">
                             @if ($order === 'popular')
-                            <option value="popular" selected="selected">人気順</option>
+                            <option class="text-muted" value="popular" selected="selected">人気順</option>
                             @else
-                            <option value="popular">人気順</option>
+                            <option class="text-muted" value="popular">人気順</option>
                             @endif
                             @if ($order === 'expensive')
-                            <option value="expensive" selected="selected">値段（高い順）</option>
+                            <option class="text-muted" value="expensive" selected="selected">値段（高い順）</option>
                             @else
-                            <option value="expensive">値段（高い順）</option>
+                            <option class="text-muted" value="expensive">値段（高い順）</option>
                             @endif
                             @if ($order === 'cheap')
-                            <option value="cheap" selected="selected">値段（安い順）</option>
+                            <option class="text-muted" value="cheap" selected="selected">値段（安い順）</option>
                             @else
-                            <option value="cheap">値段（安い順）</option>
+                            <option class="text-muted" value="cheap">値段（安い順）</option>
                             @endif
                         </div>
                     </select>
@@ -41,10 +41,10 @@
             </form>
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">投稿一覧</a>
-                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">BBクリーム</a>
-                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">コンシーラー</a>
-                    <a class="nav-item nav-link" id="nav-item-tab" data-toggle="tab" href="#nav-item" role="tab" aria-controls="nav-contact" aria-selected="false">ファンデーション</a>
+                    <a class="nav-item nav-link active text-muted" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">投稿一覧</a>
+                    <a class="nav-item nav-link text-muted" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">BBクリーム</a>
+                    <a class="nav-item nav-link text-muted" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">コンシーラー</a>
+                    <a class="nav-item nav-link text-muted" id="nav-item-tab" data-toggle="tab" href="#nav-item" role="tab" aria-controls="nav-contact" aria-selected="false">ファンデーション</a>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
