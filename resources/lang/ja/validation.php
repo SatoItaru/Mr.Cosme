@@ -148,11 +148,11 @@ return [
 
     'attributes' => [
         'brand'=>'ブランド名',
-        'body'=>'内容',
+        'body'=>'使い方',
         'name'=>'アカウントネーム',
         'cosme' => 'コスメの種類',
         'price' => '価格',
-        'detail' => '使い方',
-        'image' => '使った感想',
+        'detail' => '使った感想',
+        'image1' => '画像',
     ],
 ];
