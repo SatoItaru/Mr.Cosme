@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <h2 class="header-cosme text-muted">化粧のコツ</h2>
         <hr class="col-md-12">
-        <div class="col-md-10">
+        <div class="col-md-9">
             <div class="card text-center">
                 <h2 class="card-header text-center text-muted">
                     BBクリーム
