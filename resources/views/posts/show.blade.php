@@ -30,7 +30,7 @@
                     <div class="carousel-inner bg-secondary">
                         @foreach ($post->images as $image)
                         <div class="carousel-item @if($loop->first) active @endif">
-                            <img class="" src="{{ $image->image_path }}" alt="slide image">
+                            <img class="image-show" src="{{ $image->image_path }}" alt="slide image">
                         </div>
                         @endforeach
                     </div>
@@ -49,7 +49,7 @@
     <div class="row justify-content-center">
         <div class="col-md-9">
             <button type="submit" class="btn text-muted text-secondary comment" data-toggle="modal" data-target="#exampleModalCenter"　width="40" height="40">
-                <img src="https://res.cloudinary.com/dqxuxpwv9/image/upload/v1639018170/comment_dei2ik.png" width="40" height="40" alt="">コメント：{{$post->comments->count() }}
+                <img src="https://res.cloudinary.com/dqxuxpwv9/image/upload/v1639971085/iconmonstr-speech-bubble-comments-thin-240_kikoiu.png" width="40" height="40" alt="">コメント：{{$post->comments->count() }}
             </button>
             <div class="row justify-content-center like">
                 <like-component
@@ -77,7 +77,7 @@
                                                 <textarea class="form-control" placeholder="内容" rows="6" name="body"></textarea>
                                             </div>
                                             <button type="submit" class="btn text-muted text-secondary" data-toggle="modal" data-target="#exampleModalCenter"　width="40" height="40">
-                                                <img src="https://res.cloudinary.com/dqxuxpwv9/image/upload/v1639018170/comment_dei2ik.png" width="40" height="40" alt="">コメント</button>
+                                                <img src="https://res.cloudinary.com/dqxuxpwv9/image/upload/v1639971085/iconmonstr-speech-bubble-comments-thin-240_kikoiu.png" width="40" height="40" alt="">コメント</button>
                                     </form>
                                 </div>
                             <div class="modal-footer">
