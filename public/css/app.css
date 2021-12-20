@@ -1206,7 +1206,7 @@
 
     .col-md-7 {
         flex: 0 0 58.33333333%;
-        max-width: 58.33333333%;
+        max-width: 60.33333333%;
     }
 
     .col-md-8 {
@@ -11184,7 +11184,7 @@
     }
     .header-user {
         position: relative;
-        left: 134px;
+        left: 274px;
     }
     .header-detail {
         position: relative;
@@ -11249,10 +11249,15 @@
     .cosme-arrow {
         position: absolute;
     width: 30px;
-    left: 450px;
+    left: 400px;
     }
 
     .title-header {
         position: relative;
     left: 142px;
+    }
+
+    .profile-user-detail {
+        position: relative;
+    right: 71px;
     }

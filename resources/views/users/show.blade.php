@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="card col-md-8 mx-auto my-5 profile-show">
+<div class="card col-md-7 mx-auto my-5 ">
     <div class="edit-profile">
         <a href="{{ route('users.edit', Auth::id()) }}" class="btn">
             <img src="{{ asset('assets/images/edit.png') }}" alt="" style="width: 20px; height:20px;">
@@ -18,7 +18,7 @@
                 </div>
                 @endif
             </div>
-            <div class="card-body col-5 profile-detail profile-show-body">
+            <div class="card-body col-5 profile-detail profile-show-body profile-user-detail">
                 <p class="text-muted">アカウントネーム:{{ $user->name }}</p>
                 <p class="text-muted">年代:{{ $user->age }}</p>
                 <p class="text-muted">職業:{{ $user->occupation}}</p>
