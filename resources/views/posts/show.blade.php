@@ -7,12 +7,11 @@
             <hr class="col-md-12">
         <div class="col-md-10">
             <div class="card-body col-md-6 float-left post-detail">
-                <h2 class="text-muted">{{ $post->brand }}</h2>
-                <h2 class="text-muted">{{ $post->cosme }}</h2>
-                <h2 class="text-muted">{{ $post->price }}円</h2>
-                <p class="text-muted">＜使い方＞<br>{{ $post->body }}</p>
-                <p class="text-muted">＜使った感想＞<br>{{ $post->detail }}</p>
-                {{-- <p>投稿日時：{{ $post->created_at }}</p> --}}
+                <h2 class="text-muted my-3">{{ $post->brand }}</h2>
+                <h2 class="text-muted my-3">{{ $post->cosme }}</h2>
+                <h2 class="text-muted my-3">{{ $post->price }}円</h2>
+                <p class="text-muted my-3">＜使い方＞<br>{{ $post->body }}</p>
+                <p class="text-muted my-3">＜使った感想＞<br>{{ $post->detail }}</p>
                 {{-- <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-primary">編集する</a> --}}
                 {{-- <form action='{{ route('posts.destroy', $post->id) }}' method='post'>
                     {{ csrf_field() }}
@@ -20,17 +19,17 @@
                     <input type='submit' value='削除' class="btn btn-danger" onclick='return confirm("削除しますか？？");'>
                 </form> --}}
             </div>
-                <div id="carouselExampleIndicators" class="carousel-show slide col-md-6 float-right" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide col-md-6 float-right" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                     </ol>
-                    <div class="carousel-inner bg-secondary">
+                    <div class="carousel-inner bg-secondary carousel-inner-position">
                         @foreach ($post->images as $image)
                         <div class="carousel-item @if($loop->first) active @endif">
-                            <img class="image-show" src="{{ $image->image_path }}" alt="slide image">
+                            <img class="image-show card-img-top" src="{{ $image->image_path }}" alt="slide image">
                         </div>
                         @endforeach
                     </div>
