@@ -27,13 +27,13 @@
                         </div>
                     </select>
                 </div>
-                <input class="card form-control my-2 mr-5" type="search" placeholder="フリーワード検索" name="search" value="@if (isset($search)) {{ $search }} @endif">
+                <input class="card form-control-search my-2 mr-5" type="search" placeholder="フリーワード検索" name="search" value="@if (isset($search)) {{ $search }} @endif">
                 <div class="d-flex justify-content-center">
                     <button class="btn search-circle" type="submit">
                         <img src="{{ asset('assets/images/search.png') }}"width="30" height="30" alt="">
                     </button>
-                    <button class="btn my-2 ml-5">
-                        <a href="{{ route('posts.index') }}" class="clear-button detail btn-anime bgleft"><span>
+                    <button class="btn clear-button">
+                        <a href="{{ route('posts.index') }}" class="clear-button-innner detail btn-anime bgleft"><span>
                             クリア
                         </span></a>
                     </button>
