@@ -23,18 +23,6 @@
                                 @enderror
                             </div>
                         </div>
-
-                            {{-- <div class="form-group row justify-content-center">
-                                <div class="col-md-8">
-                                    <select type="text" class="form-control" name="age">
-                                        <option value="">年代</option>
-                                        <option value="{{ old('age') }}">20代</option>
-                                        <option value="{{ old('age') }}">30代</option>
-                                        <option value="{{ old('age') }}">40代</option>
-                                        <option value="{{ old('age') }}">50代</option>
-                                    </select>
-                                </div>
-                            </div> --}}
                             <div class="form-group row justify-content-center">
                                 <div class="col-md-8">
                                     <select type="text" class="form-control" name="age">
@@ -45,7 +33,6 @@
                                     </select>
                                 </div>
                             </div>
-
                             <div class="form-group row justify-content-center">
                                 <div class="col-md-8">
                                     <select type="text" class="form-control" name="occupation">
@@ -57,7 +44,6 @@
                                     <div style="text-transform: none;">※あなたの職種に合ったものを選んで、コスメをオススメできたり探せたりします。</div>
                                 </div>
                             </div>
-
                         <div class="form-group row justify-content-center">
                             <div class="col-md-8">
                                 <input id="email" type="email" placeholder="お使いのメールアドレスを登録" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -68,10 +54,9 @@
                                 @enderror
                             </div>
                         </div>
-
                         <div class="form-group row justify-content-center">
                             <div class="col-md-8">
-                                <input id="password" type="password" placeholder="パスワード設定" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" placeholder="パスワード設定" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('passward') }}" required autocomplete="new-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -80,13 +65,11 @@
                                 @enderror
                             </div>
                         </div>
-
                         <div class="form-group row justify-content-center">
                             <div class="col-md-8">
-                                <input id="password-confirm" type="password" placeholder="パスワードの確認"class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" placeholder="パスワードの確認"class="form-control" name="password_confirmation" value="{{ old('password_confirmation') }}" required autocomplete="new-password">
                             </div>
                         </div>
-
                         <div class="form-group row justify-content-center">
                             <div class="col-md-6 text-center">
                                 <button type="submit" class="detail btn-anime bgleft text-center text-muted">
@@ -94,7 +77,6 @@
                                 </button>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-md-12 text-center">
                                 <a href="{{ route('login.twitter') }}"><i class="fab fa-twitter">Twitterでログイン</i></a>
