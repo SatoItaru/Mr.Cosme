@@ -19,10 +19,10 @@
                 @endif
             </div>
             <div class="card-body col-5 profile-detail profile-show-body profile-user-detail">
-                <p class="text-muted">アカウントネーム:{{ $user->name }}</p>
-                <p class="text-muted">年代:{{ $user->age }}</p>
-                <p class="text-muted">職業:{{ $user->occupation}}</p>
-                <p class="text-muted">メールアドレス:{{ $user->email}}</p>
+                <h5 class="text-muted">アカウントネーム:{{ $user->name }}</h5>
+                <h5 class="text-muted user-show-age">年代:{{ $user->age }}</h5>
+                <h5 class="text-muted user-show-occupation">職業:{{ $user->occupation}}</h5>
+                <h5 class="text-muted user-show-mail">メールアドレス:{{ $user->email}}</h5>
             </div>
     </div>
 </div>
