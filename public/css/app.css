@@ -6850,11 +6850,11 @@
     }
 
     .carousel-control-prev {
-    left: -30px;
+    left: 0;
     }
 
     .carousel-control-next {
-    right: 26px;
+    right: 0;
     }
 
     .carousel-control-prev-icon,
@@ -6877,7 +6877,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    left: -45px;
+    left: 0;
     z-index: 15;
     display: flex;
     justify-content: center;
@@ -11068,7 +11068,7 @@
     .profile-detail {
         padding: 25px 0 25px 60px;
         align-items: start;
-        margin: 0;
+        margin: 16px;
     }
 
     .text-muted {
@@ -11264,10 +11264,44 @@
 
     .profile-user-detail {
         position: relative;
-    right: 71px;
+    right: 122px;
     }
 
     .carousel-inner-position {
         position: relative;
         right: 30px;
     }
+
+    .account-edit {
+        position: relative;
+        left: 140px;
+    }
+
+    .arrow-left {
+        position: absolute;
+    left: -15px;
+    }
+
+    .arrow-right {
+        position: absolute;
+    right: 45px;
+    }
+
+    .under-indicators {
+        position: absolute;
+    left: -45px;
+    }
+
+    .user-show-age {
+        position: relative;
+        top: 5px;
+    }
+    .user-show-occupation {
+        position: relative;
+        top: 10px;
+    }
+    .user-show-mail {
+        position: relative;
+        top: 15px;
+    }
+
