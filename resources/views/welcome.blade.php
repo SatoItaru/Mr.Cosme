@@ -5,7 +5,7 @@
         <meta property="og:title" content="Mr.Cosme" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mrcosme.herokuapp.com" />
-        <meta property="og:image" content="https://mrcosme.herokuapp.com/assets/images/default.png" />
+        <meta property="og:image" content="https://mrcosme.herokuapp.com/assets/images/unsplash.jpg" />
         <meta property="og:site_name" content="Mr.Cosme（ミスターコスメ）" />
         <meta property="og:description" content="メンズコスメ情報交換 Q&Aサイト" />
         <meta charset="utf-8">
