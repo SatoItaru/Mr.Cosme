@@ -11328,3 +11328,22 @@
     .clear-button-innner {
         box-shadow: 5px 5px 20px #c8c9cc, -5px -5px 20px #ffffff;
     }
+
+    .welcome-title {
+        position: relative;
+        left: 75px;
+        font-family: "Acta Display W01 Book" !important;
+        color: initial;
+    }
+
+    .lp-container {
+        margin: 0 100px 0 100px;
+    }
+
+    .lp-section {
+        max-width: 1220px;
+    }
+
+    .top-image {
+        background-image: url(https://res.cloudinary.com/dqxuxpwv9/image/upload/v1640057433/camille-brodard-LvCncarPI6A-unsplash_scjrqp.jpg);
+    }
