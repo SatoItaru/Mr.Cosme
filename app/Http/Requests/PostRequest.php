@@ -30,6 +30,7 @@ class PostRequest extends FormRequest
             'body' => 'required',
             'detail' => 'required',
             'image1' => 'required',
+            'url' => 'required',
             // 'image1' => 'mimes:jpeg,jpg,png,gif|max:10240',
         ];
     }
@@ -44,6 +45,7 @@ class PostRequest extends FormRequest
             'body.required' => '使い方を入れてください',
             'detail.required' => '使った感想を入れてください',
             'image1.required' => '画像を載せてください',
+            'url.required' => '商品のURL',
             // 'image1.mimes'    => 'ファイルタイプをjpeg,jpg,png,gifに設定してください。',
             // 'image1.max'      => 'ファイルサイズを10MB以下に設定してください。',
         ];

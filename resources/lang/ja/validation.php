@@ -154,5 +154,6 @@ return [
         'price' => '価格',
         'detail' => '使った感想',
         'image1' => '画像',
+        'url'=> '商品のURL',
     ],
 ];

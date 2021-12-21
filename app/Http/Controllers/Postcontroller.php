@@ -91,6 +91,7 @@ class Postcontroller extends Controller
         $post->body  = $request->body;
         $post->detail  = $request->detail;
         $post->price  = $request->price;
+        $post->url  = $request->url;
 
         $post->user_id = Auth::id();
 

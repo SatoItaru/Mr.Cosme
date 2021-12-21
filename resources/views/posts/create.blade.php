@@ -48,6 +48,10 @@
                         <textarea class="form-control" placeholder="コスメを使った感想" rows="4" name="detail"></textarea>
                     </div>
                     <div class="form-group">
+                        {{-- <label>ブランド</label> --}}
+                        <input type="url" class="form-control" placeholder="商品のURL" name="url">
+                    </div>
+                    <div class="form-group">
                             <label for="image">画像</label>
                             <input type="file" class="form-control-file" id="image" name="image1">
                             <input type="file" class="form-control-file" id="image" name="image2">

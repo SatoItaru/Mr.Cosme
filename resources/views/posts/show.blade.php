@@ -7,7 +7,9 @@
             <hr class="col-md-12">
         <div class="col-md-10">
             <div class="card-body col-md-6 float-left post-detail">
-                <h2 class="text-muted my-3">{{ $post->brand }}</h2>
+                @if(isset($post->url))
+                <a class="text-muted my-3 post-show-url" href="{{ $post->url }}" target="_blank" rel="noopener noreferrer" class="text-muted" onclick='return confirm("外部のページに飛ぼうとしています。よろしいですか？");'>『 {{ $post->brand }} 』</a>
+                @endif
                 <h2 class="text-muted my-3">{{ $post->cosme }}</h2>
                 <h2 class="text-muted my-3">{{ $post->price }}円</h2>
                 <p class="text-muted my-3">＜使い方＞<br>{{ $post->body }}</p>
