@@ -1,8 +1,20 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+        <title>Mr.Cosme</title>
+        <meta property="og:title" content="Mr.Cosme" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mrcosme.herokuapp.com" />
+        <meta property="og:image" content="https://mrcosme.herokuapp.com/assets/images/unsplash.jpg" />
+        <meta property="og:site_name" content="Mr.Cosme（ミスターコスメ）" />
+        <meta property="og:description" content="メンズコスメ情報交換 Q&Aサイト" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
