@@ -11345,5 +11345,66 @@
     }
 
     .top-image {
-        background-image: url(https://res.cloudinary.com/dqxuxpwv9/image/upload/v1640057433/camille-brodard-LvCncarPI6A-unsplash_scjrqp.jpg);
+        background-image: url(https://res.cloudinary.com/dqxuxpwv9/image/upload/v1640059030/dior.back-image_tbi5qa.webp);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        padding-top: 1px;
+        margin-top: -1px;
+        padding-bottom: 1px;
+        margin-bottom: -1px;
+
+        }
+
+        .box {
+            background-color: #eee;
+            width: 300px;
+            height: 300px;
+            border-radius: 30px;
+            box-shadow: 5px 5px 20px #c8c9cc, -5px -5px 20px #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            }
+
+
+            .top-image {
+            background-image: url(https://res.cloudinary.com/dqxuxpwv9/image/upload/v1640059030/dior.back-image_tbi5qa.webp);
+            background-repeat: no-repeat;
+            background-position-x: center;
+            padding-top: 1px;
+            margin-top: -1px;
+            padding-bottom: 1px;
+            margin-bottom: -1px;
+
+            }
+
+
+    .lp-icon {
+    width: 70px;
+    height: 70px;
+    margin-top: 50px;
+    color: white;
     }
+
+    .lp-section {
+    max-width: 1440px;
+    background-image: url(https://res.cloudinary.com/dqxuxpwv9/image/upload/v1640059030/dior.back-image_tbi5qa.webp);
+            background-repeat: no-repeat;
+            background-position-x: center;
+            padding-top: 1px;
+            margin-top: -1px;
+            padding-bottom: 1px;
+            margin-bottom: -1px;
+}
+
+.lp-notice {
+    width: 100%;
+    height: 200px;
+    margin:auto;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.add-line {
+    background-color: white;
+}
