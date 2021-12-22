@@ -26,7 +26,7 @@
                             <div class="form-group row justify-content-center">
                                 <div class="col-md-8">
                                     <select type="text" class="form-control" name="age">
-                                        <option value="{{ old('age') }}">年代</option>
+                                        <option disabled selected　value="{{ old('age') }}">年代</option>
                                         @foreach (Config::get('age.age_select') as $key => $val)
                                             <option value="{{ $key }}">{{ $val }}</option>
                                         @endforeach
@@ -36,7 +36,7 @@
                             <div class="form-group row justify-content-center">
                                 <div class="col-md-8">
                                     <select type="text" class="form-control" name="occupation">
-                                        <option value="{{ old('occupation') }}">職業</option>
+                                        <option disabled selected value="{{ old('occupation') }}">職業</option>
                                         @foreach (Config::get('occupation.job_name') as $key => $val)
                                             <option value="{{ $key }}">{{ $val }}</option>
                                         @endforeach

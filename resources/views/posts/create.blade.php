@@ -22,35 +22,35 @@
                 {{csrf_field()}}
                     <div class="form-group">
                         {{-- <label>ブランド</label> --}}
-                        <input type="text" class="form-control" placeholder="ブランド名" name="brand">
+                        <input type="text" class="form-control" placeholder="ブランド名" name="brand" value="{{ old('brand') }}">
                     </div>
                     <div class="form-group ">
                         <select type="text" class="form-control" name="cosme">
-                            <option disabled selected value="">コスメの種類</option>
+                            <option disabled selected value="{{ old('cosme') }}">コスメの種類</option>
                             @foreach (Config::get('cosme.cosme_name') as $key => $val)
-                                <option value="{{ $key }}">{{ $val }}</option>
+                                <option value="{{ $key }}" @if(old('cosme')== $key) selected @endif>{{ $val }}</option>
                             @endforeach
                         </select>
                     </div>
 
                     <div class="form-group">
                         {{-- <label>価格</label> --}}
-                        <input class="form-control" placeholder="価格" name="price" type="number" step="1000">
+                        <input class="form-control" placeholder="価格" name="price" type="number" step="1000" value="{{ old('price') }}">
                         <div style="text-transform: none;">※価格は数字で入れてください。</div>
                     </div>
 
 
                     <div class="form-group">
                         {{-- <label>使い方</label> --}}
-                        <textarea class="form-control" placeholder="コスメの使い方" rows="2" name="body"></textarea>
+                        <textarea class="form-control" placeholder="コスメの使い方" rows="2" name="body">{{ old('body') }}</textarea>
                     </div>
                     <div class="form-group">
                         {{-- <label>使った感想</label> --}}
-                        <textarea class="form-control" placeholder="コスメを使った感想" rows="4" name="detail"></textarea>
+                        <textarea class="form-control" placeholder="コスメを使った感想" rows="4" name="detail">{{ old('detail') }}</textarea>
                     </div>
                     <div class="form-group">
                         {{-- <label>ブランド</label> --}}
-                        <input type="url" class="form-control" placeholder="商品のURL" name="url">
+                        <input type="url" class="form-control" placeholder="商品のURL" name="url" value="{{ old('url') }}">
                     </div>
                     <div class="form-group">
                             <label for="image">画像</label>
