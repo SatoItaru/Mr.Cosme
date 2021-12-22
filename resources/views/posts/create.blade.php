@@ -26,7 +26,7 @@
                     </div>
                     <div class="form-group ">
                         <select type="text" class="form-control" name="cosme">
-                            <option value="">コスメの種類</option>
+                            <option disabled selected value="">コスメの種類</option>
                             @foreach (Config::get('cosme.cosme_name') as $key => $val)
                                 <option value="{{ $key }}">{{ $val }}</option>
                             @endforeach
