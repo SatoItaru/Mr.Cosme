@@ -94,7 +94,7 @@
                             <div class="my-3">
                                 <div class="card text-center top-image">
                                     <h2 class="card-header text-center text-white">
-                                        3. ファンデーション
+                                        3. フェイスパウダー
                                         </h2>
                                         <div class="card-body">
                                         <p class="card-text text-white">
