@@ -25,22 +25,32 @@
                         </div>
                             <div class="form-group row justify-content-center">
                                 <div class="col-md-8">
-                                    <select type="text" class="form-control" name="age">
+                                    <select type="text" class="form-control @error('age') is-invalid @enderror" name="age" required autocomplete="age" autofocus>
                                         <option disabled selected　value="{{ old('age') }}">年代</option>
                                         @foreach (Config::get('age.age_select') as $key => $val)
-                                            <option value="{{ $key }}">{{ $val }}</option>
+                                            <option value="{{ $key }}" @if(old('agex')== $key) selected @endif>{{ $val }}</option>
                                         @endforeach
                                     </select>
+                                    @error('age')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group row justify-content-center">
                                 <div class="col-md-8">
-                                    <select type="text" class="form-control" name="occupation">
+                                    <select type="text" class="form-control @error('occupation') is-invalid @enderror" name="occupation" required autocomplete="occupation" autofocus>
                                         <option disabled selected value="{{ old('occupation') }}">職業</option>
                                         @foreach (Config::get('occupation.job_name') as $key => $val)
-                                            <option value="{{ $key }}">{{ $val }}</option>
+                                            <option value="{{ $key }}" @if(old('occupation')== $key) selected @endif>{{ $val }}</option>
                                         @endforeach
                                     </select>
+                                    @error('occuration')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                                     <div style="text-transform: none;">※あなたの職種に合ったものを選んで、コスメをオススメできたり探せたりします。</div>
                                 </div>
                             </div>
