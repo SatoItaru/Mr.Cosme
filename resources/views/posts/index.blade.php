@@ -44,7 +44,7 @@
                     <a class="nav-item nav-link active text-muted" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">投稿一覧</a>
                     <a class="nav-item nav-link text-muted" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="true">BBクリーム</a>
                     <a class="nav-item nav-link text-muted" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="true">コンシーラー</a>
-                    <a class="nav-item nav-link text-muted" id="nav-item-tab" data-toggle="tab" href="#nav-item" role="tab" aria-controls="nav-contact" aria-selected="true">ファンデーション</a>
+                    <a class="nav-item nav-link text-muted" id="nav-item-tab" data-toggle="tab" href="#nav-item" role="tab" aria-controls="nav-contact" aria-selected="true">フェイスパウダー</a>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
@@ -190,7 +190,7 @@
                     <div class="tab-pane fade" id="nav-item" role="tabpanel" aria-labelledby="nav-item-tab">
                         <div class="row">
                             @foreach ($posts as $post)
-                            @if ($post->cosme === 'ファンデーション')
+                            @if ($post->cosme === 'フェイスパウダー')
                             <div class="col-md-4 my-2">
                                 <div class="card" style="width: 17rem;">
                                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

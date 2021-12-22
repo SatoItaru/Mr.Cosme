@@ -8,7 +8,7 @@
         <div class="col-md-10">
             <div class="card-body col-md-6 float-left post-detail">
                 @if(isset($post->url))
-                <a class="text-muted my-3 post-show-url" href="{{ $post->url }}" target="_blank" rel="noopener noreferrer" class="text-muted" onclick='return confirm("外部のページに飛ぼうとしています。よろしいですか？");'>『 {{ $post->brand }} 』</a>
+                <a class="text-muted my-3 post-show-url" href="{{ $post->url }}" target="_blank" rel="noopener noreferrer" class="text-muted" onclick='return confirm("Mr.Cosmeから飛ぼうとしています。よろしいですか？");'>『 {{ $post->brand }} 』</a>
                 @endif
                 <h2 class="text-muted my-3">{{ $post->cosme }}</h2>
                 <h2 class="text-muted my-3">{{ $post->price }}円</h2>

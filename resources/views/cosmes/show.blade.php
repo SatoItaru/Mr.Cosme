@@ -38,7 +38,7 @@
             <div class="my-5">
                 <div class="card text-center">
                     <h2 class="card-header text-center text-muted">
-                        ファンデーション
+                        フェイスパウダー
                         </h2>
                         <div class="card-body">
                         <p class="card-text text-muted">
