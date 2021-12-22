@@ -49,7 +49,7 @@
         <hr class="col-md-12">
     <div class="row justify-content-center">
         <div class="col-md-9">
-            <button type="submit" class="btn text-muted text-secondary comment" data-toggle="modal" data-target="#exampleModalCenter"　width="40" height="40">
+            <button type="button" class="btn text-muted text-secondary comment" data-toggle="modal" data-target="#exampleModalCenter"　width="40" height="40">
                 <img src="https://res.cloudinary.com/dqxuxpwv9/image/upload/v1639971085/iconmonstr-speech-bubble-comments-thin-240_kikoiu.png" width="40" height="40" alt="">コメント：{{$post->comments->count() }}
             </button>
             <div class="row justify-content-center like">
