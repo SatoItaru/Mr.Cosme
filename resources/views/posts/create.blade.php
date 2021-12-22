@@ -36,8 +36,9 @@
                     <div class="form-group">
                         {{-- <label>価格</label> --}}
                         <input class="form-control" placeholder="価格" name="price" type="number" step="1000">
+                        <div style="text-transform: none;">※価格は数字で入れてください。</div>
                     </div>
-                    <div style="text-transform: none;">※価格は数字で入れてください。</div>
+
 
                     <div class="form-group">
                         {{-- <label>使い方</label> --}}
