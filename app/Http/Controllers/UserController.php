@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\User;
+use App\Post;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
 use JD\Cloudder\Facades\Cloudder;
@@ -54,10 +55,10 @@ class UserController extends Controller
     public function show($id)
     {
         $user = Auth::user();
-        // $user = User::find($id); // ユーザを取得
-        // $posts = $user->posts()->get(); // ユーザが持つ投稿一覧を取得
 
-        return view('users.show',compact('user'));
+        $posts = Post::where('user_id', $user->id)->paginate(20);
+
+        return view('users.show',compact('user','posts'));
     }
 
     /**
