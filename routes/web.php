@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('posts', 'Postcontroller');
-Route::resource('comments', 'CommentController');
+Route::resource('comments', 'Commentcontroller');
 Route::resource('users', 'UserController');
 Route::resource('likes', 'LikeController');
 Route::resource('cosmes', 'CosmeController');

@@ -8,7 +8,7 @@ use App\Comment;
 use App\Post;
 use Auth;
 
-class CommentController extends Controller
+class Commentcontroller extends Controller
 {
     public function __construct()
     {
