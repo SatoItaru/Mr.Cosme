@@ -117,7 +117,9 @@ class UserController extends Controller
         $user->save();
         $user->update($request->all());
 
-        return view('users.show', compact('user'));
+        $posts = Post::where('user_id', $user->id)->paginate(20);
+
+        return view('users.show', compact('user','posts'));
     }
 
     /**
