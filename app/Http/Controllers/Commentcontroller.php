@@ -52,7 +52,7 @@ class CommentController extends Controller
 
         $comment -> save();
 
-        return view('posts.show', compact('post')); //リターン先は該当の投稿画面の詳細画面
+        return redirect()->route('posts.show', compact('post')); //リターン先は該当の投稿画面の詳細画面
     }
 
     /**
