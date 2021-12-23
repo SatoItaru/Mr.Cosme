@@ -34,7 +34,8 @@
                         @endif
                     @endauth
                 </div>
-            @endif --}}
+                @endif --}}
+
     <section class="top-image">
         <div class="lp-container">
             <div class="justify-content-center">

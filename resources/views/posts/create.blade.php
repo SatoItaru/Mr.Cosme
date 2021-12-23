@@ -38,8 +38,8 @@
                         </select>
                         @error('cosme')
                             <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                <strong>{{ $message }}</strong>
+                            </span>
                         @enderror
                     </div>
 
@@ -48,8 +48,8 @@
                         <input class="form-control @error('price') is-invalid @enderror" placeholder="価格" name="price" type="number" step="1000" value="{{ old('price') }}" required autocomplete="price" autofocus>
                         @error('price')
                             <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                <strong>{{ $message }}</strong>
+                            </span>
                         @enderror
                         <div style="text-transform: none;">※価格は数字で入れてください。</div>
                     </div>
@@ -60,8 +60,8 @@
                         <textarea class="form-control @error('body') is-invalid @enderror" placeholder="コスメの使い方" rows="2" name="body" required autocomplete="body" autofocus>{{ old('body') }}</textarea>
                         @error('body')
                         <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
+                            <strong>{{ $message }}</strong>
+                        </span>
                         @enderror
                     </div>
                     <div class="form-group">
@@ -69,8 +69,8 @@
                         <textarea class="form-control @error('detail') is-invalid @enderror" placeholder="コスメを使った感想" rows="4" name="detail" required autocomplete="detail" autofocus>{{ old('detail') }}</textarea>
                         @error('detail')
                         <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
+                            <strong>{{ $message }}</strong>
+                        </span>
                         @enderror
                     </div>
                     <div class="form-group">
@@ -78,8 +78,8 @@
                         <input type="url" class="form-control @error('url') is-invalid @enderror" placeholder="商品のURL" name="url" value="{{ old('url') }}" required autocomplete="url" autofocus>
                         @error('url')
                         <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
+                            <strong>{{ $message }}</strong>
+                        </span>
                         @enderror
                     </div>
                     <div class="form-group">
