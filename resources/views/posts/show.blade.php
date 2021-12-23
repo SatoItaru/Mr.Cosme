@@ -74,11 +74,12 @@
                                     <form action="{{ route('comments.store') }}" method="POST">
                                         {{csrf_field()}}
                                         <input type="hidden" name="post_id" value="{{ $post->id }}">
-                                            <div class="form-group">
-                                                <textarea class="form-control" placeholder="内容" rows="6" name="body"></textarea>
-                                            </div>
-                                            <button type="submit" class="btn text-muted text-secondary" data-toggle="modal" data-target="#exampleModalCenter"　width="40" height="40">
-                                                <img src="https://res.cloudinary.com/dqxuxpwv9/image/upload/v1639971085/iconmonstr-speech-bubble-comments-thin-240_kikoiu.png" width="40" height="40" alt="">コメント</button>
+                                        <div class="form-group">
+                                            <textarea class="form-control" placeholder="内容" rows="6" name="body"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn text-muted text-secondary" data-toggle="modal" data-target="#exampleModalCenter"　width="40" height="40">
+                                            <img src="https://res.cloudinary.com/dqxuxpwv9/image/upload/v1639971085/iconmonstr-speech-bubble-comments-thin-240_kikoiu.png" width="40" height="40" alt="">コメント
+                                        </button>
                                     </form>
                                 </div>
                             <div class="modal-footer">
