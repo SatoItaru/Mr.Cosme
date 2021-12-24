@@ -19,7 +19,8 @@
             </nav>
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                    <div class="row">
+                    <div class="container">
+                    <div class="row justify-content-center">
                         @if($user->favorites -> isEmpty())
                         <div class="card col-md-12 my-3 mx-auto">
                             <p class="text-center my-3 text-muted">いいねした投稿がありません。<br>気になる記事をいいねしてみましょう。</p>
@@ -77,7 +78,9 @@
                                 @endif
                             </div>
                         </div>
+                        </div>
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="container">
                                 <div class="row">
                                     @if($user->favorites -> isEmpty())
                             <div class="card col-md-12 my-3 mx-auto">
@@ -137,9 +140,11 @@
                             @endforeach
                             @endif
                         </div>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                        <div class="row">
+                        <div class="container">
+                        <div class="row justify-content-center">
                             @if($user->favorites -> isEmpty())
                             <div class="card col-md-12 my-3 mx-auto">
                                 <p class="text-center my-3 text-muted">いいねした投稿がありません。<br>気になる記事をいいねしてみましょう。</p>
@@ -198,6 +203,7 @@
                                 @endforeach
                                 @endif
                             </div>
+                        </div>
                         </div>
                         <div class="tab-pane fade" id="nav-item" role="tabpanel" aria-labelledby="nav-item-tab">
                             <div class="row">
@@ -263,6 +269,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
 </div>

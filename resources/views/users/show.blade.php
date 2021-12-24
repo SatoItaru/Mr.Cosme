@@ -48,7 +48,8 @@
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                            <div class="row">
+                            <div class="container">
+                            <div class="row justify-content-center">
                                 @if($posts -> isEmpty())
                                 <div class="card col-md-12 my-3 mx-auto">
                                     <p class="text-center my-3 text-muted">まだ投稿がありません。<br>あなたのお気に入りのコスメを投稿してみましょう。</p>
@@ -106,7 +107,9 @@
                                     @endif
                                 </div>
                             </div>
+                            </div>
                             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <div class="container">
                                     <div class="row">
                                         @if($posts -> isEmpty())
                                     <div class="card col-md-12 my-3 mx-auto">
@@ -167,8 +170,10 @@
                                     @endif
                                 </div>
                             </div>
+                            </div>
                             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                <div class="row">
+                                <div class="container">
+                                <div class="row justify-content-center">
                                     @if($posts -> isEmpty())
                                     <div class="card col-md-12 my-3 mx-auto">
                                         <p class="text-center my-3 text-muted">まだ投稿がありません。<br>あなたのお気に入りのコンシーラーを投稿してみましょう。</p>
@@ -227,8 +232,10 @@
                                     @endforeach
                                     @endif
                                 </div>
+                                </div>
                             </div>
                             <div class="tab-pane fade" id="nav-item" role="tabpanel" aria-labelledby="nav-item-tab">
+                                <div class="container">
                                 <div class="row">
                                     @if($posts -> isEmpty())
                                     <div class="card col-md-12 my-3 mx-auto">
@@ -288,6 +295,7 @@
                                         @endforeach
                                         @endif
                                     </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
