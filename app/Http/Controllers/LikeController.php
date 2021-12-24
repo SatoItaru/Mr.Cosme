@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use App\Post;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -52,7 +53,9 @@ class LikeController extends Controller
     public function show($id)
     {
         $user = Auth::user();
-        
+
+        // $post = Post::find($id)->paginate(20);
+
         return view('likes.show', compact('user'));
     }
 
