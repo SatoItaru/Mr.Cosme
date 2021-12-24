@@ -2,7 +2,11 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <h2 class="header-text text-muted">いいねした投稿一覧</h2>
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2 class="text-muted  col-md-9">いいねした投稿一覧</h2>
+            </div>
+            </div>
         <hr class="col-md-12">
         <div class="col-md-9">
             <nav>

@@ -8,26 +8,30 @@
             編集する
         </a>
     </div>
-    <div class="row">
-        <div class="card-body col-md-5 profile-show-body">
-            @if ($user->image_path == null)
-                <img src="{{ asset('assets/images/default.png') }}"class="profile-image" alt="">
-            @else
-            <div class="icon-container">
-                <img src="{{ $user->image_path }}" class="icon rounded-circle img-thumbnail mb-3" alt="画像">
-            </div>
-            @endif
-            </div>
-            <div class="card-body col-5 profile-detail profile-show-body profile-user-detail">
-                <h5 class="text-muted">アカウントネーム:{{ $user->name }}</h5>
-                <h5 class="text-muted user-show-age">年代:{{ $user->age }}</h5>
-                <h5 class="text-muted user-show-occupation">職業:{{ $user->occupation}}</h5>
-                <h5 class="text-muted user-show-mail">メールアドレス:{{ $user->email}}</h5>
+    <div class="container">
+        <div class="row">
+            <div class="card-body col-md-4 profile-show-body">
+                @if ($user->image_path == null)
+                    <img src="{{ asset('assets/images/default.png') }}"class="profile-image" alt="">
+                @else
+                <div class="icon-container">
+                    <img src="{{ $user->image_path }}" class="icon rounded-circle img-thumbnail mb-3" alt="画像">
+                </div>
+                @endif
+                </div>
+                <div class="card-body col-md-5 profile-detail profile-show-body">
+                    <h5 class="text-muted">アカウントネーム:{{ $user->name }}</h5>
+                    <h5 class="text-muted user-show-age">年代:{{ $user->age }}</h5>
+                    <h5 class="text-muted user-show-occupation">職業:{{ $user->occupation}}</h5>
+                    {{-- <h5 class="text-muted user-show-mail">メールアドレス:{{ $user->email}}</h5> --}}
+                </div>
             </div>
         </div>
     </div>
-    <div class="">
-        <h2 class="text-muted">投稿一覧</h2>
+    <div class="container">
+    <div class="row justify-content-center">
+        <h2 class="text-muted col-md-9">投稿一覧</h2>
+    </div>
     </div>
     <hr class="col-md-11">
     <div class="container">

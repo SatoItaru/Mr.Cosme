@@ -11060,17 +11060,19 @@
     .profile-image {
         width: 150px;
         height: 150px;
-        position: absolute;
+        position: relative;
         border-radius: 50%;
+        margin-left: 45px;
         background: #ddd;
         box-shadow: 5px 5px 20px #c8c9cc, -5px -5px 20px #ffffff;
         border: #ddd solid 5px;
     }
 
     .profile-detail {
-        padding: 25px 0 25px 60px;
+        /* padding: 25px 0 25px 60px; */
         align-items: start;
-        margin: 16px;
+        margin-top: 20px;
+        margin-left: 16px;
     }
 
     .text-muted {
@@ -11266,10 +11268,10 @@
     left: 142px;
     }
 
-    .profile-user-detail {
+    /* .profile-user-detail {
         position: relative;
     right: 122px;
-    }
+    } */
 
     .carousel-inner-position {
         position: relative;
