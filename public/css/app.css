@@ -11146,20 +11146,20 @@
         opacity: 0.8;
     }
 
-    .search-circle {
+    /* .search-circle {
         border-radius: 50%;
         position: absolute;
         right: 142px;
         top: 65px;
         color:rgba(0,0,0,0);
         outline: none
-    }
+    }*/
 
-    .clear-button {
+    /* .clear-button {
         position: relative;
         left: 376px;
         bottom: 57px;
-    }
+    } */
 
     .post-button {
         position: relative;

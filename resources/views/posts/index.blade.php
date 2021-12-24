@@ -31,16 +31,24 @@
                             </div>
                         </select>
                     </div>
-                    <input class="card form-control-search my-2 mr-5" type="search" placeholder="フリーワード検索" name="search" value="@if (isset($search)) {{ $search }} @endif">
-                    <div class="d-flex justify-content-center">
-                        <button class="btn search-circle" type="submit">
-                            <img src="{{ asset('assets/images/search.png') }}"width="30" height="30" alt="">
-                        </button>
-                        <button class="btn clear-button">
-                            <a href="{{ route('posts.index') }}" class="clear-button-innner detail btn-anime bgleft"><span>
-                            クリア
-                            </span></a>
-                        </button>
+                    <div class="container">
+                        <div class="row">
+                            <input class="card col-md-8 form-control-search my-3" type="search" placeholder="フリーワード検索" name="search" value="@if (isset($search)) {{ $search }} @endif">
+                            <div class="d-flex">
+                                {{-- <button class="btn clear-button detail btn-anime bgleft ml-3" type="submit">
+                                    <span><img src="{{ asset('assets/images/search.png') }}"width="30" height="30" alt="">検索
+                                    </span></button> --}}
+                                <button class="btn clear-button ml-3 detail btn-anime bgleft" type="submit">
+                                    <span><img src="{{ asset('assets/images/search.png') }}"width="30" height="30" alt="">検索
+                                    </span>
+                                </button>
+                                <button class="btn clear-button">
+                                    <a href="{{ route('posts.index') }}" class="clear-button-innner detail btn-anime bgleft"><span>
+                                    クリア
+                                    </span></a>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </form>
                 <nav>
