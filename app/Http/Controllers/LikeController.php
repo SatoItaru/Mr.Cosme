@@ -54,8 +54,6 @@ class LikeController extends Controller
     {
         $user = Auth::user();
 
-        // $post = Post::find($id)->paginate(20);
-
         return view('likes.show', compact('user'));
     }
 
