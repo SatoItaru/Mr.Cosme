@@ -3,7 +3,11 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <h2 class="header-detail text-muted">詳細</h2>
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2 class="text-muted  col-md-9">詳細</h2>
+            </div>
+            </div>
             <hr class="col-md-12">
         <div class="col-md-10">
             <div class="card-body col-md-6 float-left post-detail">

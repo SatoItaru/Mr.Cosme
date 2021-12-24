@@ -59,11 +59,11 @@
                                     <span>{{ __('ログイン') }}</span>
                                 </button>
 
-                                @if (Route::has('password.request'))
+                                {{-- @if (Route::has('password.request'))
                                     <a class="text-muted btn-link" href="{{ route('password.request') }}">
                                         {{ __('パスワードをお忘れですか？') }}
                                     </a>
-                                @endif
+                                @endif --}}
                             </div>
                         </div>
 

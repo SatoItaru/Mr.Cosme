@@ -2,7 +2,11 @@
 
 @section('content')
 <div class="container">
-    <h2 class="account-edit text-muted">アカウント編集</h2>
+    <div class="container">
+        <div class="row justify-content-center">
+            <h2 class="text-muted  col-md-9">アカウント編集</h2>
+        </div>
+        </div>
             <hr class="col-md-12">
     <div class="row justify-content-center">
         <div class="col-md-9">
@@ -57,9 +61,9 @@
                                     </select>
                                 </div>
 
-                                <div class="row my-4">
+                                {{-- <div class="row my-4">
                                     <input type="text" placeholder='新しいメールアドレス' class="form-control" value="{{ $user->email}}" name='email'>
-                                </div>
+                                </div> --}}
 
                                 <div class="row my-4">
                                     <button type="submit" class="detail btn-anime bgleft text-center text-muted"><span>更新する</span></button>

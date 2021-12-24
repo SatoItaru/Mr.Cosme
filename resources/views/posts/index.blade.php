@@ -2,7 +2,11 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <h2 class="header-post text-muted">投稿一覧</h2>
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2 class="text-muted  col-md-9">投稿一覧</h2>
+            </div>
+            </div>
         <hr class="col-md-12">
             <div class="col-md-9">
                 <form class="mb-2 mt-4 text-center" method="GET" action="{{ route('posts.index') }}">
