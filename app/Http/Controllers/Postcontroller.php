@@ -51,11 +51,11 @@ class Postcontroller extends Controller
             }
         }
         if($order === 'popular'){
-            $query->withCount('favorites')->orderBy('favorites_count', 'desc');
+            $query->withCount('favorites')->orderBy('favorites_count', 'desc')->get();
         } elseif ($order === 'expensive'){
-            $query->orderBy('price', 'desc');
+            $query->orderBy('price', 'desc')->get();
         } elseif ($order === 'cheap'){
-            $query->orderBy('price', 'asc');
+            $query->orderBy('price', 'asc')->get();
         }
         // 上記で取得した$queryをページネートにし、変数$usersに代入
         $posts = $query->paginate(20);

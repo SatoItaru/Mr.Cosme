@@ -49,7 +49,7 @@
 
                     <div class="form-group">
                         {{-- <label>価格</label> --}}
-                        <input class="form-control @error('price') is-invalid @enderror" placeholder="価格" name="price" type="number" step="1000" value="{{ old('price') }}" required autocomplete="price" autofocus>
+                        <input class="form-control @error('price') is-invalid @enderror" placeholder="価格" name="price" type="number" value="{{ old('price') }}" required autocomplete="price" autofocus>
                         @error('price')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
