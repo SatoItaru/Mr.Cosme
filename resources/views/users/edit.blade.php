@@ -37,7 +37,7 @@
 
                                 <div class="row my-4">
                                     <select type="text" class="form-control" name="age">
-                                        {{-- <option value="{{ $user->age }}">年代</option> --}}
+                                        <option disabled selected value="{{ $user->age }}">年代</option>
                                             @foreach (Config::get('age.age_select') as $key => $val)
                                                 @if ($val === $user->age)
                                                     <option value="{{ $key }}" selected="selected">{{ $val }}</option>
@@ -50,7 +50,7 @@
 
                                 <div class="row my-4">
                                     <select type="text" class="form-control" name="occupation">
-                                        {{-- <option value="{{ $user->occupation }}">職業</option> --}}
+                                        <option disabled selected value="{{ $user->occupation }}">職業</option>
                                             @foreach (Config::get('occupation.job_name') as $key => $val)
                                                 @if ($val === $user->occupation)
                                                     <option value="{{ $key }}" selected="selected">{{ $val }}</option>

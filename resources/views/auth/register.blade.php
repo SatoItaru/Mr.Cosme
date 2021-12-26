@@ -36,17 +36,6 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
-                                    {{-- <select type="text" class="form-control @error('age') is-invalid @enderror" name="age" required autocomplete="age" autofocus>
-                                        <option disabled selected　value="{{ old('age') }}">年代</option>
-                                        @foreach (Config::get('age.age_select') as $key => $val)
-                                            <option value="{{ $key }}" @if(old('agex')== $key) selected @endif>{{ $val }}</option>
-                                        @endforeach
-                                    </select>
-                                    @error('age')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror --}}
                                 </div>
                             </div>
                             <div class="form-group row justify-content-center">
