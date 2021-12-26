@@ -99,6 +99,7 @@
         </nav>
 
         <main class="py-3">
+            @include('layouts.flash')
             @yield('content')
         </main>
     </div>

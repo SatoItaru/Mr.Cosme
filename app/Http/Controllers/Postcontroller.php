@@ -167,7 +167,7 @@ class Postcontroller extends Controller
 
         $post->images()->save($image1,$image2,$image3,$image4);
 
-        return redirect()->route('posts.index');
+        return redirect()->route('posts.index')->with('success_message', 'あなたのコスメが投稿されました');
     }
 
     /**
