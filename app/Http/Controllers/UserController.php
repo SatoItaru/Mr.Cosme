@@ -119,7 +119,7 @@ class UserController extends Controller
 
         $posts = Post::where('user_id', $user->id)->paginate(20);
 
-        return view('users.show', compact('user','posts'));
+        return redirect()->route('users.show', compact('user', 'posts'))->with('success_message', 'ユーザー情報が変更されました');
     }
 
     /**
