@@ -35,18 +35,16 @@
                         <div class="row">
                             <input class="card col-md-8 form-control-search my-3" type="search" placeholder="フリーワード検索" name="search" value="@if (isset($search)) {{ $search }} @endif">
                             <div class="d-flex">
-                                {{-- <button class="btn clear-button detail btn-anime bgleft ml-3" type="submit">
-                                    <span><img src="{{ asset('assets/images/search.png') }}"width="30" height="30" alt="">検索
-                                    </span></button> --}}
-                                <button class="btn clear-button ml-3 detail btn-anime bgleft" type="submit">
-                                    <span><img src="{{ asset('assets/images/search.png') }}"width="30" height="30" alt="">検索
-                                    </span>
+                                <div class="my-2">
+                                <button class="btn ml-3 detail btn-anime bgleft" type="submit">
+                                    <span><i class="fas fa-search"></i>検索</span>
                                 </button>
-                                <button class="btn clear-button">
-                                    <a href="{{ route('posts.index') }}" class="clear-button-innner detail btn-anime bgleft"><span>
+                                </div>
+                                <div>
+                                    <a href="{{ route('posts.index') }}" class="detail btn-anime bgleft ml-4 my-2"><span><i class="fas fa-redo"></i>
                                     クリア
                                     </span></a>
-                                </button>
+                                </div>
                             </div>
                         </div>
                     </div>
