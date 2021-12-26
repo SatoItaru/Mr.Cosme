@@ -39,7 +39,7 @@
     <section class="top-image">
         <div class="lp-container">
             <div class="justify-content-center">
-                <div class="card top-image my-5">
+                <div class="card top-image-2 my-5">
                     <div class="text-center">
                         <h1 class="text-white my-3">Mr.Cosme</h1>
                         <h2 class="text-white">メンズメイク初心者大歓迎</h2>
@@ -63,7 +63,7 @@
                     <div class="text-center">
                         <h2 class="text-white my-5" >メンズメイク簡単3ステップ</h2>
                         <hr class="add-line">
-                            <div class="card text-center top-image">
+                            <div class="card text-center top-image-2">
                                 <h2 class="card-header text-center text-white">
                                     1. BBクリーム
                                     </h2>
@@ -78,7 +78,7 @@
                                 {{-- <img src="{{ asset('assets/images/arrow.png') }}" alt="" class="cosme-arrow"> --}}
                             </div>
                             <div class="my-3">
-                                <div class="card text-center top-image">
+                                <div class="card text-center top-image-2">
                                     <h2 class="card-header text-center text-white">
                                         2. コンシーラー
                                         </h2>
@@ -93,7 +93,7 @@
                                     {{-- <img src="{{ asset('assets/images/arrow.png') }}" alt="" class="cosme-arrow"> --}}
                                 </div>
                             <div class="my-3">
-                                <div class="card text-center top-image">
+                                <div class="card text-center top-image-2">
                                     <h2 class="card-header text-center text-white">
                                         3. フェイスパウダー
                                         </h2>
@@ -117,7 +117,7 @@
             <hr class="add-line">
             <div class="row text-center">
                 <div class="col-md-4 my-3">
-                    <div class="box mx-auto top-image">
+                    <div class="box mx-auto top-image-2">
                         <i class="fas fa-search fa-5x lp-icon"></i>
                         {{-- <img src="https://res.cloudinary.com/dqxuxpwv9/image/upload/v1640072615/iconmonstr-search-thin-240_lt0ukn.png" alt="" class="section3-image rounded-circle"> --}}
                         <p class="mt-4 text-white section3-text">メンズメイク初心者でも<br>3ステップを踏めば誰でも簡単に<br>メンズメイクができます。</p>
@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 my-3">
-                    <div class="box mx-auto top-image">
+                    <div class="box mx-auto top-image-2">
                         <i class="far fa-images fa-5x lp-icon"></i>
                         {{-- <img src="https://res.cloudinary.com/dqxuxpwv9/image/upload/v1640072613/iconmonstr-picture-13-240_dmdjm3.png" alt="" class="section3-image rounded-circle"> --}}
                         <p class="mt-4 text-white section3-text">自分が投稿したコスメだけを<br>一覧で保管ができるので<br>自分専用ポーチとして確認ができます。</p>
@@ -133,7 +133,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 my-3">
-                    <div class="box mx-auto top-image">
+                    <div class="box mx-auto top-image-2">
                         <i class="far fa-thumbs-up fa-5x lp-icon"></i>
                         {{-- <img src="https://res.cloudinary.com/dqxuxpwv9/image/upload/v1640072612/iconmonstr-facebook-like-1-240_ixam8b.png" alt="" class="section3-image rounded-circle"> --}}
                         <p class="mt-4 text-white section3-text">気になるコスメの投稿を<br>いいねをして一覧で保管できます。<br></p>
@@ -148,7 +148,7 @@
             <h2 class="text-center my-5 text-white">お知らせ</h2>
             <hr class="add-line">
         </div>
-        <div class="card col-md-8 lp-notice top-image text-center">
+        <div class="card col-md-8 lp-notice top-image-2 text-center">
             <p class="text-white lp-notice-text">2021/12/25<span class="notice-content"></span></p>
         </div>
     </section>
