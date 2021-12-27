@@ -2,11 +2,11 @@
     <div class="container">
         <div class="row justify-content-center mt-1">
             <div class="col-md-12">
-                <div>
-                    <button @click="unfavorite()" class="btn btn-danger like-button" v-if="result">
+                <div class="ml-5">
+                    <button @click="unfavorite()" class="btn btn-danger like-button ml-4" v-if="result">
                     いいね解除
                     </button>
-                    <button @click="favorite()" class="btn btn-success like-button" v-else>
+                    <button @click="favorite()" class="btn btn-success like-button ml-5" v-else>
                     いいね
                     </button>
                     <p class="count">：{{ count }}</p>
