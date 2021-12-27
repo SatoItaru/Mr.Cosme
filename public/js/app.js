@@ -37494,11 +37494,11 @@ __webpack_require__(/*! setimmediate */ "./node_modules/setimmediate/setImmediat
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
 exports.setImmediate = (typeof self !== "undefined" && self.setImmediate) ||
-                        (typeof global !== "undefined" && global.setImmediate) ||
-                        (this && this.setImmediate);
+                       (typeof global !== "undefined" && global.setImmediate) ||
+                       (this && this.setImmediate);
 exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
-                        (typeof global !== "undefined" && global.clearImmediate) ||
-                        (this && this.clearImmediate);
+                         (typeof global !== "undefined" && global.clearImmediate) ||
+                         (this && this.clearImmediate);
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
@@ -37516,44 +37516,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 var render = function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row justify-content-center mt-1" }, [
-        _c("div", { staticClass: "col-md-12" }, [
-            _c("div", [
-            _vm.result
-                ? _c(
-                    "button",
-                    {
-                    staticClass: "btn btn-danger",
-                    on: {
-                        click: function($event) {
-                        return _vm.unfavorite()
-                        }
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center mt-1" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "ml-5" }, [
+          _vm.result
+            ? _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger like-button ml-4",
+                  on: {
+                    click: function($event) {
+                      return _vm.unfavorite()
                     }
-                    },
-                    [_vm._v("\n                いいね解除\n                ")]
-                )
-                : _c(
-                    "button",
-                    {
-                    staticClass: "btn btn-success",
-                    on: {
-                        click: function($event) {
-                        return _vm.favorite()
-                        }
+                  }
+                },
+                [_vm._v("\n                いいね解除\n                ")]
+              )
+            : _c(
+                "button",
+                {
+                  staticClass: "btn btn-success like-button ml-5",
+                  on: {
+                    click: function($event) {
+                      return _vm.favorite()
                     }
-                    },
-                    [_vm._v("\n                いいね\n                ")]
-                ),
-            _vm._v(" "),
-            _c("p", [_vm._v("いいね数：" + _vm._s(_vm.count))])
-            ])
+                  }
+                },
+                [_vm._v("\n                いいね\n                ")]
+              ),
+          _vm._v(" "),
+          _c("p", { staticClass: "count" }, [_vm._v("：" + _vm._s(_vm.count))])
         ])
-        ])
+      ])
     ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -49884,7 +49884,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   null,
   null
-
+  
 )
 
 /* hot reload */
@@ -49904,7 +49904,7 @@ component.options.__file = "resources/js/components/LikeComponent.vue"
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LikeComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./LikeComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/LikeComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LikeComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LikeComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
