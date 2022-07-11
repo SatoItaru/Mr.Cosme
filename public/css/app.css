@@ -16006,6 +16006,10 @@ input[type=button].btn-block {
   /* border-bottom: 1px solid rgba(0, 0, 0, 0.125); */
 }
 
+.card-header:first-child {
+  border-radius: 30px 30px 0 0;
+}
+
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: rgba(0, 0, 0, 0.03);
@@ -16100,7 +16104,7 @@ input[type=button].btn-block {
 
   .card-group > .card:not(:last-child) .card-img-top,
   .card-group > .card:not(:last-child) .card-header {
-    border-top-right-radius: 0;
+    border-top-right-radius: 30px;
   }
 
   .card-group > .card:not(:last-child) .card-img-bottom,
@@ -16115,7 +16119,7 @@ input[type=button].btn-block {
 
   .card-group > .card:not(:first-child) .card-img-top,
   .card-group > .card:not(:first-child) .card-header {
-    border-top-left-radius: 0;
+    border-top-left-radius: 30px;
   }
 
   .card-group > .card:not(:first-child) .card-img-bottom,
@@ -22204,9 +22208,9 @@ a.text-dark:focus {
 }
 
 .cosme-arrow {
-  position: absolute;
-  width: 30px;
-  left: 400px;
+  display: block;
+  margin: auto;
+  width: 40px;
 }
 
 .title-header {
