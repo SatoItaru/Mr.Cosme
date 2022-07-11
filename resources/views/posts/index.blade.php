@@ -96,7 +96,7 @@
                                         <p class="text-center text-muted">{{ $post->price }}円</p>
                                         <a href="{{ route('posts.show', $post->id) }}" class="detail btn-anime bgleft"><span>詳細へ</span></a>
                                         </div>
-                                        <div class="card-footer created">
+                                        <div class="created">
                                             <p class="text-center text-muted">投稿日:{{ $post->created_at }}</p>
                                         </div>
                                     </div>
@@ -142,7 +142,7 @@
                                             <p class="text-center text-muted">{{ $post->price }}円</p>
                                             <a href="{{ route('posts.show', $post->id) }}" class="detail btn-anime bgleft"><span>詳細へ</span></a>
                                         </div>
-                                        <div class="card-footer created">
+                                        <div class="created">
                                             <p class="text-center text-muted">投稿日:{{ $post->created_at }}</p>
                                         </div>
                                     </div>
@@ -189,7 +189,7 @@
                                             <p class="text-center text-muted">{{ $post->price }}円</p>
                                             <a href="{{ route('posts.show', $post->id) }}" class="detail btn-anime bgleft"><span>詳細へ</span></a>
                                         </div>
-                                        <div class="card-footer created">
+                                        <div class="created">
                                             <p class="text-center text-muted">投稿日:{{ $post->created_at }}</p>
                                         </div>
                                     </div>
@@ -236,7 +236,7 @@
                                                 <p class="text-center text-muted">{{ $post->price }}円</p>
                                                 <a href="{{ route('posts.show', $post->id) }}" class="detail btn-anime bgleft"><span>詳細へ</span></a>
                                             </div>
-                                            <div class="card-footer created">
+                                            <div class="created">
                                                 <p class="text-center text-muted">投稿日:{{ $post->created_at }}</p>
                                             </div>
                                         </div>
