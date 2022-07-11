@@ -24,7 +24,7 @@
             <div class="row my-2">
                 <img src="{{ asset('assets/images/arrow.png') }}" alt="" class="cosme-arrow">
             </div>
-            <div class="my-5">
+            <div class="my-3">
                 <div class="card text-center">
                     <h2 class="card-header text-center text-muted">
                         コンシーラー
@@ -39,7 +39,7 @@
                 <div class="row my-2">
                     <img src="{{ asset('assets/images/arrow.png') }}" alt="" class="cosme-arrow">
                 </div>
-            <div class="my-5">
+            <div class="my-3">
                 <div class="card text-center">
                     <h2 class="card-header text-center text-muted">
                         フェイスパウダー
